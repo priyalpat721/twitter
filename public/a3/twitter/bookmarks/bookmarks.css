@@ -1,0 +1,146 @@
+.wd-body-color {
+    background-color: black;
+    border-color: rgb(47, 51, 54);
+    font-family: helvetica, serif;
+    border-top:none;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.wd-bk-container {
+    border-color: rgb(47, 51, 54);
+    border-style: solid;
+    border-width: 1px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.wd-bookmarks {
+    color: white;
+    font-size: 20px;
+    padding-left: 16px;
+    padding-top: 12px;
+
+}
+
+.wd-handle {
+    color: lightgrey;
+    font-size: 13px;
+    padding-left: 16px;
+    padding-bottom: 12px;
+}
+
+.fa-ellipsis-h {
+    color: rgb(29,161,242);
+    font-size: 13px;
+    text-align: right;
+    position: absolute;
+    right: 2%;
+}
+.wd-avatar {
+    display: flex;
+    padding-left: 16px;
+    padding-top: 12px;
+    border-color: rgb(47, 51, 54);
+    border-style: solid;
+    border-width: 1px;
+}
+
+img {
+    border-radius: 50px;
+    width: 48px;
+    height: 48px;
+}
+
+.wd-fullname {
+    padding-left: 16px;
+    display: inline-flex;
+    font-size: 15px;
+    color: white;
+}
+
+.wd-name-handle {
+    padding-left: 12px;
+    color: lightslategray;
+    position: relative;
+}
+
+.tweet {
+    color: white;
+    font-size: 15px;
+    padding-left: 16px;
+    width: 506px;
+    padding-bottom: 12px;
+}
+
+.wd-avatar .fa-ellipsis-h {
+    color: rgb(110, 118, 125);
+}
+
+figure {
+    margin: 12px 0px 0 75px;
+    display: table;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+}
+
+.wd-img-post {
+    width: 504px;
+    height: 264px;
+    border-radius: 10px 10px 0 0;
+}
+
+.wd-title {
+    color: white;
+    font-size: 15px;
+    padding: 12px;
+    line-height: 20px;
+}
+
+.wd-text {
+    color: lightslategray;
+    font-size: 15px;
+    text-align: left;
+    width: 475px;
+}
+
+.wd-link > a{
+    color: lightslategray;
+    text-decoration: none;
+}
+
+
+.wd-link .fa-link {
+    color: lightslategray;
+}
+
+.wd-icons {
+    padding: 12px;
+    text-decoration: none;
+}
+
+.wd-icons .fa-comment{
+    margin-left: 75px;
+    color: lightgrey;
+}
+
+.wd-icons .fa-retweet{
+    margin-left: 75px;
+    color: lightgrey;
+}
+
+.wd-icons .fa-heart{
+    margin-left: 75px;
+    color: red;
+}
+
+.wd-icons .fa-upload{
+    margin-left: 75px;
+    color: lightgrey;
+}
+
+.wd-num {
+    margin: 12px;
+    font-weight: normal;
+}
