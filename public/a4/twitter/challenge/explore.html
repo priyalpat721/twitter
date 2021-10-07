@@ -11,7 +11,7 @@
 <body class="bg-black">
     <div class="container">
         <div class="row mt-2">
-            <div class="col-xxl-2 col-xl-2 col-lg-1 col-md-2 col-sm-2 d-none d-sm-block">
+            <div class="left col-xxl-2 col-xl-2 col-lg-1 col-md-2 col-sm-2 d-none d-sm-block">
                 <div class="col-12">
                     <ul class="list-group">
                         <li class="list-group-item bg-black border-0">
@@ -26,7 +26,7 @@
                                 <div class="col-2">
                                     <a class="text-white" href="#"><i class="fas fa-home"></i></a>
                                 </div>
-                                <div class="col-xxl-4 d-none d-xl-block">
+                                <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
                                     <label class="text-white">Home</label>
                                 </div>
 
@@ -37,7 +37,7 @@
                                 <div class="col-2">
                                     <a class="text-white fw-bolder" href="#"><i class="fas fa-hashtag"></i></a>
                                 </div>
-                                <div class="col-xxl-4 d-none d-xl-block">
+                                <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
                                     <label class="text-white fw-bolder">Explore</label>
                                 </div>
                             </div>
@@ -47,7 +47,7 @@
                                 <div class="col-2 ">
                                     <a class="text-white" href="#"><i class="fas fa-bell"></i></a>
                                 </div>
-                                <div class="col-xxl-4 d-none d-xl-block">
+                                <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
                                     <label class="text-white">Notification</label>
                                 </div>
                             </div>
@@ -57,7 +57,7 @@
                                 <div class="col-2">
                                     <a class="text-white" href="#"><i class="fas fa-envelope"></i></a>
                                 </div>
-                                <div class="col-xxl-4 d-none d-xl-block">
+                                <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
                                     <label class="text-white">Messages</label>
                                 </div>
 
@@ -68,7 +68,7 @@
                                 <div class="col-2">
                                     <a class="text-white" href="#"><i class="fas fa-bookmark"></i></a>
                                 </div>
-                                <div class="col-xxl-4 d-none d-xl-block">
+                                <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
                                     <label class="text-white">Bookmarks</label>
                                 </div>
                             </div>
@@ -78,7 +78,7 @@
                                 <div class="col-2">
                                     <a class="text-white" href="#"><i class="fas fa-list"></i></a>
                                 </div>
-                                <div class="col-xxl-4 d-none d-xl-block">
+                                <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
                                     <label class="text-white">Lists</label>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@
                                 <div class="col-2">
                                     <a class="text-white" href="#"><i class="fas fa-user"></i></a>
                                 </div>
-                                <div class="col-xxl-4 d-none d-xl-block">
+                                <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
                                     <label class="text-white">Profile</label>
                                 </div>
                             </div>
@@ -100,24 +100,23 @@
                                         <span class="iconify" data-icon="gridicons:ellipsis-circle"></span>
                                     </a>
                                 </div>
-                                <div class="col-xxl-4 d-none d-xl-block">
+                                <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
                                     <label class="text-white">More</label>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </div>
-                <button class="btn btn-primary override-bs text-center">Tweet</button>
+                <button class="btn btn-primary override-bs text-center pe-1">Tweet</button>
             </div>
-            <div class="col-xxl-6 col-xl-6 col-lg-7 col-md-10 col-sm-10 col-xs-11 mt-2">
-                <div class="row">
+            <div class="col middle col-xxl-6 col-xl-6 col-lg-7 col-md-10 col-sm-10 col-xs-11 mt-0">
+                <div class="row mt-2">
                     <div class="col-11">
                         <label style="padding-left: 10px"><i class="fas fa-search"></i></label>
                         <input type ="text"
-                               class="form-control rounded-pill bg-dark border-0"
+                               class="form-control rounded-pill bg-dark border-dark text-white"
                                placeholder="Search Twitter"
                                style="margin-top: -30px; padding-left: 40px"/>
-
                     </div>
                     <div class="col-1">
                         <a  class="wd-configuration"
@@ -126,38 +125,42 @@
                         </a>
                     </div>
                 </div>
-                <div class="row ms-1 border-0">
-                    <ul class="nav nav-tabs mt-2 flex-sm-nowrap border-0">
+                <div class="row bg-black">
+                    <ul class="nav nav-tabs mt-2 mb-2 border-dark border-top-1">
                         <li class="nav-item">
-                            <a class="nav-link text-nowrap text-white" href="for-you.html">For you</a>
+                            <a class="nav-link override-bs " href="for-you.html">For you</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="trending.html">Trending</a>
+                            <a class="nav-link override-bs" href="trending.html">Trending</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="news.html">News</a>
+                            <a class="nav-link override-bs" href="news.html">News</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="sports.html">Sports</a>
+                            <a class="nav-link override-bs" href="sports.html">Sports</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-nowrap active bg-black border-0 clicked" href="entertainment.html">Entertainment</a>
+                        <li class="nav-item active">
+                            <a class="nav-link override-bs1 d-none d-md-block" href="entertainment.html">Entertainment</a>
                         </li>
                     </ul>
                 </div>
-                <div class="card overflow-hidden mt-2 bg-black">
-                    <img class="card-img-top"
+                <div class="row card overflow-hidden rounded-0 border-dark border-top-0 border-start-0
+                 border-end-0 pb-2 bg-black justify-content-between">
+                    <span class="rounded-0 bg-black border-0">
+                        <img
                          src="starship.jpg"
-                         style="width: 635px; height: 400px"/>
+                         style="width: 650px; height: 400px;"/>
+                    </span>
                     <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
                         <h3 class="card-title text-white font-weight-bold">SpaceX's Starship</h3>
                     </div>
                 </div>
-                 <ul class="list-group border-dark">
-                     <li class="list-group-item bg-black border-dark">
+                 <ul class="list-group rounded-0">
+
+                     <li class="list-group-item bg-black">
                          <div class="row">
                              <div class="col-9 col-lg-8 col-md-7 col-sm-6">
-                                 <label class="text-white">Web Development</label>
+                                 <label class="wd-heading">Web Development</label>
                                  <div class="text-white fw-bold">
                                      <label>ReactJS</label>
                                      <i class="fas fa-check-circle fa-xs"></i></br>
@@ -165,69 +168,70 @@
                                      very easy to build Single Page Applications or SPAs
                                  </div>
                              </div>
-                             <div class="col-3 col-lg-4 col-md-5 col-sm-6">
+                             <div class="col-3 col-lg-4 col-md-5 col-sm-6 d-flex justify-content-end">
                                  <img src="react.png"
                                       class="rounded-3"
-                                      style="height:100px; weight:100px; padding-left: 50px">
+                                      style="height:100px;">
                              </div>
                          </div>
                      </li>
-                     <li class="list-group-item bg-black border-dark">
-                         <div class="row">
+                     <li class="list-group-item bg-black">
+                         <div class="row border-top-1">
                              <div class="col-9 col-lg-8 col-md-7 col-sm-6">
                                  <div class="text-white fw-bold">
                                      <label>JavaScript</label>
                                      <i class="fas fa-check-circle fa-xs"></i>
-                                     <label class="fw-normal text-white"> - 2h</label></br>
+                                     <label class="fw-normal wd-heading"> - 2h</label></br>
                                      JavaScript is programming language that can run on browsers
                                      as well as desktops
                                  </div>
                              </div>
-                             <div class="col-3 col-lg-4 col-md-5 col-sm-6">
+                             <div class="col-3 col-lg-4 col-md-5 col-sm-6 d-flex justify-content-end">
                                  <img src="javascript.png"
                                       class="rounded-3"
-                                      style="height:100px; weight:100px; padding-left: 50px">
+                                      style="height:100px; weight:100px">
                              </div>
                          </div>
                      </li>
-                     <li class="list-group-item bg-black border-dark">
+                     <li class="list-group-item bg-black">
                          <div class="row">
                              <div class="col-9 col-lg-8 col-md-7 col-sm-6">
-                                 <label class="text-white">Web Development</label>
+                                 <label class="wd-heading">Web Development</label>
                                  <div class="text-white fw-bold">
                                      <label>jQuery</label>
                                      <i class="fas fa-check-circle fa-xs"></i></br>
-                                     <label class="text-white">123K Tweets</label>
+                                     <label class="wd-text-black">123K Tweets</label>
                                  </div>
                              </div>
-                             <div class="col-3 col-lg-4 col-md-5 col-sm-6">
+                             <div class="col-3 col-lg-4 col-md-5 col-sm-6 d-flex justify-content-end">
                                  <img src="jquery.png"
                                       class="rounded-3"
-                                      style="height:100px; weight:100px; padding-left: 50px">
+                                      style="height:100px;">
                              </div>
                          </div>
                      </li>
-                     <li class="list-group-item bg-black border-dark">
+                     <li class="list-group-item bg-black">
                          <div class="row">
                              <div class="col-9 col-lg-8 col-md-7 col-sm-6">
-                                 <label class="text-white">Web Development</label>
+                                 <label class="wd-heading">Web Development</label>
                                  <div class="text-white fw-bold">
                                      <label>JavaScript</label>
                                      <i class="fas fa-check-circle fa-xs"></i>
-                                     <label class="fw-normal text-black-50"> - 2h</label></br>
-                                     <label class="text-white">123K Tweets</label>
+                                     <label class="fw-normal wd-heading"> - 2h</label></br>
+                                     <label class="wd-text-black">123K Tweets</label>
                                  </div>
                              </div>
-                             <div class="col-3 col-lg-4 col-md-5 col-sm-6">
+                             <div class="col-3 col-lg-4 col-md-5 col-sm-6 d-flex justify-content-end">
                                  <img src="nodejs.png"
                                       class="rounded-3"
-                                      style="height:100px; weight:100px; padding-left: 50px">
+                                      style="height:100px;">
                              </div>
                          </div>
                      </li>
+
                  </ul>
             </div>
-            <div class="col-xxl-4 col-xl-4 col-lg-4 d-none d-lg-block " >
+            <div class="right col-xxl-4 col-xl-4 col-lg-4 d-none d-lg-block " >
                 <ul class="list-group bg-dark border-dark">
                         <li class="list-group-item border-0 bg-dark text-white">Who to follow</li>
                         <li class="list-group-item border-0 bg-dark text-white">
@@ -302,7 +306,7 @@
                             <div class="row">
                                 <div class="col-2">
                                     <img src="tesla.jpg" class="rounded-circle"
-                                         style="width: 50px; height: 40px"/>
+                                         style="width: 40px; height: 40px"/>
                                 </div>
                                 <div class="col-xxl-7 col-lg-6 text-nowrap">
                                     <label class="fw-bold">Tesla</label>
