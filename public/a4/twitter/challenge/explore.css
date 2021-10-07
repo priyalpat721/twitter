@@ -1,3 +1,4 @@
+
 .btn-primary.override-bs {
     border-radius: 20px;
     margin-top: 8px;
@@ -7,4 +8,17 @@
 .btn-primary.override-bs1 {
     border-radius: 20px;
     margin-top: 8px;
+    background-color: white;
+    color:black;
+    outline: none;
+    border-color: white;
+}
+.fa-cog {
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: black;
+}
+
+.fa-search{
+    color: gray;
 }
