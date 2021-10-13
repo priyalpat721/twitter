@@ -1,0 +1,54 @@
+
+.btn-primary.override-bs {
+    border-radius: 20px;
+    margin-top: 8px;
+    min-width: 100%;
+}
+
+.btn-primary.override-bs1 {
+    border-radius: 20px;
+    margin-top: 8px;
+    background-color: white;
+    color:black;
+    outline: none;
+    border-color: white;
+}
+.fa-cog {
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: black;
+}
+
+.fa-search{
+    color: gray;
+}
+
+.nav-link.override-bs {
+    color: gray !important;
+    background-color: black;
+}
+
+.nav-link.override-bs1 {
+    color: white !important;
+    font-weight: bold !important;
+    background-color: black;
+}
+.wd-heading{
+    color: gray;
+}
+
+.nav-item.active .nav-link.override-bs1 {
+    border-bottom: 2px solid rgb(29, 161, 242) !important;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.wd-text-black{
+    color: gray;
+    font-weight: normal !important;
+}
+
+.middle {
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
