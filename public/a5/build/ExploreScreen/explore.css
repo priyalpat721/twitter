@@ -8,3 +8,12 @@
     border-radius: 20px;
     margin-top: 8px;
 }
+
+.wd-thumbnails {
+    width: 100px;
+    height: 100px;
+}
+
+.list-group-item .active {
+    background-color: #3fa9da;
+}

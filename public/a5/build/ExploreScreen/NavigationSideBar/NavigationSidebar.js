@@ -1,101 +1,134 @@
 const NavigationSidebar = () => {
-    return(`
-            <div class="list-group">
-                <a class="list-group-item" href="/">
-                    <i class="fab fa-twitter"></i></a>
-
-                <a class="list-group-item" href="/">
-                    <div class="row">
-                        <div class="col-2">
-                            <i class="fas fa-home"></i>
+    let stringHtml = (`
+            <div class="nav-bar">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="/" class="text-white">
+                        <i class="fab fa-twitter"></i>
+                        </a></li>
+                    <li class="list-group-item">
+                    <a  href="../HomeScreen/home.html" class="text-white">
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
+                                <label>Home</label>
+                            </div>
                         </div>
-                        <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
-                            <label>Home</label>
+                    </a>
+                    </li>
+                    
+                    <li class="list-group-item" href="../ExploreScreen/explore.html">
+                        <a  href="../ExploreScreen/explore.html" class="text-white">
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="fas fa-hashtag"></i>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
+                                <label>Explore</label>
+                            </div>
                         </div>
-                    </div>
-                </a>
-
-                <a class="list-group-item active" href="/">
-                    <div class="row">
-                        <div class="col-2">
-                            <i class="fas fa-hashtag"></i>
+                        </a>
+                    </li>
+    
+                    <li class="list-group-item">
+                        <a href="/" class="text-white">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fas fa-bell"></i>
+                                </div>
+                                <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
+                                    <label>Notifications</label>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+    
+                    <li class="list-group-item" href="/">
+                        <a href="/" class="text-white">
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
+                                <label>Messages</label>
+                            </div>
                         </div>
-                        <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
-                            <label>Explore</label>
+                        </a>
+                    </li>
+    
+                    <li class="list-group-item" href="/">
+                        <a href="/" class="text-white">
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="fas fa-bookmark"></i>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
+                                <label>Bookmarks</label>
+                            </div>
                         </div>
-                    </div>
-                </a>
-
-                <a class="list-group-item" href="/">
-                    <div class="row">
-                        <div class="col-2">
-                            <i class="fas fa-bell"></i>
+                        </a>
+                    </li>
+    
+                    <li class="list-group-item" href="/">
+                        <a href="/" class="text-white">
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="fas fa-list"></i>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
+                                <label>Lists</label>
+                            </div>
                         </div>
-                        <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
-                            <label>Notifications</label>
+                        </a>
+                    </li>
+    
+                    <li class="list-group-item" href="/">
+                        <a href="/" class="text-white">
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
+                                <label>Profile</label>
+                            </div>
                         </div>
-                    </div>
-                </a>
-
-                <a class="list-group-item" href="/">
-                    <div class="row">
-                        <div class="col-2">
-                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="list-group-item" href="/">
+                        <a href="/" class="text-white">
+                        <div class="row">
+                            <div class="col-2">
+                                <span class="iconify" data-icon="gridicons:ellipsis-circle"></span>
+                            </div>
+                            <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
+                                <label>More</label>
+                            </div>
                         </div>
-                        <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
-                            <label>Messages</label>
-                        </div>
-                    </div>
-                </a>
-
-                <a class="list-group-item" href="/">
-                    <div class="row">
-                        <div class="col-2">
-                            <i class="fas fa-bookmark"></i>
-                        </div>
-                        <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
-                            <label>Bookmarks</label>
-                        </div>
-                    </div>
-                </a>
-
-                <a class="list-group-item" href="/">
-                    <div class="row">
-                        <div class="col-2">
-                            <i class="fas fa-list"></i>
-                        </div>
-                        <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
-                            <label>Lists</label>
-                        </div>
-                    </div>
-                </a>
-
-                <a class="list-group-item" href="/">
-                    <div class="row">
-                        <div class="col-2">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
-                            <label>Profile</label>
-                        </div>
-                    </div>
-                </a>
-                <a class="list-group-item" href="/">
-                    <div class="row">
-                        <div class="col-2">
-                            <span class="iconify" data-icon="gridicons:ellipsis-circle"></span>
-                        </div>
-                        <div class="col-xxl-4 col-xl-4 d-none d-xl-block">
-                            <label>More</label>
-                        </div>
-                    </div>
-                </a>
+                        </a>
+                    </li>
+                </ul>
             </div>
+
+            <script type="text/javascript">
+                const curr = location.href;
+                const item = document.querySelectorAll('a');
+                for (let i = 0; i < item.length; i++) {
+                    if (item[i].href === curr) {
+                        item[i].className += "active";
+                    }
+                }
+            </script>
             <div class="d-grid mt-2">
                 <a href="tweet.html"
                    class="btn btn-primary btn-block rounded-pill">
                     Tweet</a>
             </div>
             `);
+
+
+    return stringHtml;
 }
 export default NavigationSidebar;
