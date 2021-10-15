@@ -1,13 +1,13 @@
-const NavigationSidebar = () => {
-    let stringHtml = (`
+const NavigationSidebar = (active) => {
+    return (`
             <div class="nav-bar">
                 <ul class="list-group">
                     <li class="list-group-item">
                         <a href="/" class="text-white">
                         <i class="fab fa-twitter"></i>
                         </a></li>
-                    <li class="list-group-item">
-                    <a  href="../HomeScreen/home.html" class="text-white">
+                    <li class="list-group-item ${active === 'home' ? 'active' : ''}">
+                        <a href="../HomeScreen/home.html" class="text-white">
                         <div class="row">
                             <div class="col-2">
                                 <i class="fas fa-home"></i>
@@ -19,7 +19,7 @@ const NavigationSidebar = () => {
                     </a>
                     </li>
                     
-                    <li class="list-group-item" href="../ExploreScreen/explore.html">
+                    <li class="list-group-item ${active === 'explore' ? 'active' : ''}">
                         <a  href="../ExploreScreen/explore.html" class="text-white">
                         <div class="row">
                             <div class="col-2">
@@ -32,7 +32,7 @@ const NavigationSidebar = () => {
                         </a>
                     </li>
     
-                    <li class="list-group-item">
+                    <li class="list-group-item ${active === 'notifications' ? 'active' : ''}">
                         <a href="/" class="text-white">
                             <div class="row">
                                 <div class="col-2">
@@ -45,7 +45,7 @@ const NavigationSidebar = () => {
                         </a>
                     </li>
     
-                    <li class="list-group-item" href="/">
+                    <li class="list-group-item ${active === 'messages' ? 'active' : ''}">
                         <a href="/" class="text-white">
                         <div class="row">
                             <div class="col-2">
@@ -58,7 +58,7 @@ const NavigationSidebar = () => {
                         </a>
                     </li>
     
-                    <li class="list-group-item" href="/">
+                    <li class="list-group-item ${active === 'bookmarks' ? 'active' : ''}">
                         <a href="/" class="text-white">
                         <div class="row">
                             <div class="col-2">
@@ -71,7 +71,7 @@ const NavigationSidebar = () => {
                         </a>
                     </li>
     
-                    <li class="list-group-item" href="/">
+                    <li class="list-group-item ${active === 'lists' ? 'active' : ''}">
                         <a href="/" class="text-white">
                         <div class="row">
                             <div class="col-2">
@@ -84,7 +84,7 @@ const NavigationSidebar = () => {
                         </a>
                     </li>
     
-                    <li class="list-group-item" href="/">
+                    <li class="list-group-item ${active === 'profile' ? 'active' : ''}">
                         <a href="/" class="text-white">
                         <div class="row">
                             <div class="col-2">
@@ -97,7 +97,7 @@ const NavigationSidebar = () => {
                         </a>
                     </li>
                     
-                    <li class="list-group-item" href="/">
+                    <li class="list-group-item ${active === 'more' ? 'active' : ''}">
                         <a href="/" class="text-white">
                         <div class="row">
                             <div class="col-2">
@@ -111,24 +111,11 @@ const NavigationSidebar = () => {
                     </li>
                 </ul>
             </div>
-
-            <script type="text/javascript">
-                const curr = location.href;
-                const item = document.querySelectorAll('a');
-                for (let i = 0; i < item.length; i++) {
-                    if (item[i].href === curr) {
-                        item[i].className += "active";
-                    }
-                }
-            </script>
             <div class="d-grid mt-2">
                 <a href="tweet.html"
                    class="btn btn-primary btn-block rounded-pill">
                     Tweet</a>
             </div>
             `);
-
-
-    return stringHtml;
 }
 export default NavigationSidebar;

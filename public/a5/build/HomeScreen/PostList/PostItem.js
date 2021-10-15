@@ -34,15 +34,15 @@ const PostItem = (post) => {
             <div class="row border-bottom border-dark">
             <div class="col-xxl-1"></div>
              <div class="col-xxl-11">
-                <div class="wd-icons mb-2">
-                    <span class="row"><a href="#" class="text-decoration-none text-dark"><i class="far fa-comment d-inline pe-5"><span
-                        class="wd-num">${post.comments}</span></i></a></span>
-                    <span class="row"><a href="#" class="text-decoration-none text-dark"><i class="fas fa-retweet d-inline pe-5"><span
-                        class="wd-num">${post.retweets}</span></i></a></span>
-                    <span class="row"><a href="#" class="text-decoration-none text-dark"><i class="fas fa-heart d-inline pe-5"><span
-                        class="wd-num">${post.heart}</span></i></a></span>
-                    <span class="row"><a href="#" class="text-decoration-none text-dark"><i class="fas fa-upload d-inline pe-5"><span
-                        class="wd-num">  </span></i></a></span>
+                <div class="row mb-2">
+                    <div class="col-3"><a href="#" class="text-decoration-none text-dark"><i class="far fa-comment d-inline pe-5"><span
+                        class="wd-num">${post.comments}</span></i></a></div>
+                    <div class="col-3"><a href="#" class="text-decoration-none text-dark"><i class="fas fa-retweet d-inline pe-5"><span
+                        class="wd-num">${post.retweets}</span></i></a></div>
+                    <div class="col-3"><a href="#" class="text-decoration-none text-dark"><i class="fas fa-heart d-inline pe-5"><span
+                        class="wd-num">${post.heart}</span></i></a></div>
+                    <div class="col-3"><a href="#" class="text-decoration-none text-dark"><i class="fas fa-upload d-inline pe-5"><span
+                        class="wd-num">  </span></i></a></div>
                 </div>
             </div>
         </div>`;
