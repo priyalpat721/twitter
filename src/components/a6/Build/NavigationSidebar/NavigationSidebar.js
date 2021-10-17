@@ -10,9 +10,8 @@ const NavigationSidebar = (
             <div className="nav-bar">
                 <ul className="list-group">
                     <Link to="/a6/" className="list-group-item">
-                        <a href="/" className="text-white">
                             <i className="fab fa-twitter"/>
-                        </a></Link>
+                        </Link>
                     <Link to="/a6/twitter/home" className={`list-group-item text-white
                           ${active === 'home' ? 'active' :""}`}>
                             <div className="row">

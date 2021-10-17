@@ -6,9 +6,9 @@ const WhoToFollowList = () => {
     return (
             <ul className="list-group">
                 {
-                    who.map(w => {
+                    who.map((w, key) => {
                         return (
-                            <WhoToFollowListItem who={w}/>
+                            <WhoToFollowListItem who={w} key={key}/>
                         );
                     })
                 }

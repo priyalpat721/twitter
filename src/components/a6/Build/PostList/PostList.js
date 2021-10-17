@@ -6,9 +6,9 @@ const PostList = () => {
     return (
             <ul className="list-group">
                 {
-                    posts.map(post => {
+                    posts.map((post, key) => {
                         return (
-                            <PostItem post={post}/>
+                            <PostItem post={post} key={key}/>
                         );
                     })
                 }

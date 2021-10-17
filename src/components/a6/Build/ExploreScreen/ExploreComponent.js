@@ -4,9 +4,9 @@ const ExploreComponent = () => {
         <div>
             <div className={"row mb-1"}>
                  <div className={"col-11 mt-2 mb-1"}>
-                        <div><label><i className={"fas fa-search"} style={{"padding-left": "10px"}} /></label></div>
+                        <div><label><i className={"fas fa-search"} style={{"paddingLeft": "10px"}} /></label></div>
                         <div><input type ="text"
-                               className={"form-control rounded-pill"} style={{"margin-top": "-30px", "padding-left": "30px"}}
+                               className={"form-control rounded-pill"} style={{"marginTop": "-30px", "paddingLeft": "30px"}}
                                     placeholder="Search Twitter"/></div>
                     </div>
                     <div className={"col-1"}>
@@ -34,7 +34,7 @@ const ExploreComponent = () => {
                 </li>
            </ul>
            <div className={"card overflow-hidden mt-2 rounded-0"}>
-                <img className={"card-img-top rounded-0"} width={"650px"} height={"400px"} src={"../../images/starship.jpg"}/>
+                <img className={"card-img-top rounded-0"} width={"650px"} height={"400px"} src={"../../images/starship.jpg"} alt={""}/>
                 <div className={"card-img-overlay h-100 d-flex flex-column justify-content-end"}>
                     <h3 className={"card-title text-white font-weight-bold"}>SpaceX's Starship</h3>
                 </div>

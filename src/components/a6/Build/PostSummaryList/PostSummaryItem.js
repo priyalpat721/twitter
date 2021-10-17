@@ -16,7 +16,7 @@ const PostSummaryItem = (
                                  <i className="fas fa-check-circle fa-xs text-white"/> - {post.time}<br></br>{post.title}</div>
                          </div>
                          <div className="col-3 col-lg-4 col-md-5 col-sm-6 d-flex justify-content-end">
-                         <img src={post.image} className="rounded wd-thumbnails" width={"100px"} height={"100px"}/>
+                         <img src={post.image} className="rounded wd-thumbnails" width={"100px"} height={"100px"} alt={""}/>
                         </div>
                   </div>
              </li>

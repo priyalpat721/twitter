@@ -3,11 +3,11 @@ import post from "./posts.json"
 const PostSummaryList = () => {
     return (
         <div>
-            <ul class="list-group">
+            <ul className="list-group">
                 {
-        post.map(p => {
+        post.map((p, key) => {
             return(
-                <PostSummaryItem post ={p}/>
+                <PostSummaryItem post ={p} key={key}/>
         );
         })
     }
