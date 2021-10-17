@@ -11,13 +11,13 @@ function App() {
     return (
         <BrowserRouter>
             <div className="container">
-                <Route path="/a6/" exact={true}>
+                <Route path={["/", "/a6"]} exact={true}>
                     <Index/>
                 </Route>
-                <Route path={["/", "/a6", "/a6/twitter", "/a6/twitter/home"]} exact={true}>
+                <Route path="/a6/twitter/home" exact={true}>
                     <HomeScreen/>
                 </Route>
-                <Route path={["/", "/a6", "/a6/twitter", "/a6/twitter/explore"]} exact={true}>
+                <Route path="/a6/twitter/explore" exact={true}>
                     <ExploreScreen/>
                 </Route>
 
