@@ -4,8 +4,9 @@ import './vendors/bootstrap/bootstrap.min.css';
 import './vendors/fontawesome/css/all.css';
 import Index from "./components/a6/Practice";
 import HomeScreen from "./components/a6/Build/HomeScreen/HomeScreen";
-import ExploreScreen from "./components/a6/Build/ExploreScreen/ExploreScreen";
 import {BrowserRouter, Route} from "react-router-dom";
+import HelloWorld from "./components/a6/HelloWorld";
+import ExploreScreen from "./components/a6/Build/ExploreScreen/ExploreScreen";
 
 function App() {
     return (
@@ -17,9 +18,11 @@ function App() {
                 <Route path="/a6/twitter/home" exact={true}>
                     <HomeScreen/>
                 </Route>
-                <Route path="/a6/twitter/explore" exact={true}>
-                    <ExploreScreen/>
+                <Route path="/a6/hello" exact={true}>
+                    <HelloWorld/>
                 </Route>
+                <Route path="/a6/twitter/home" component={HomeScreen}/>
+                <Route path="/a6/twitter/explore" component={ExploreScreen}/>
 
             </div>
         </BrowserRouter>
