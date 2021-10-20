@@ -15,13 +15,13 @@ function App() {
                 <Route path={["/", "/a6"]} exact={true}>
                     <Index/>
                 </Route>
-                <Route path="/a6/twitter/home" exact={true}>
+                <Route path="/a6/twitter/home" component={HomeScreen} exact={true}>
                     <HomeScreen/>
                 </Route>
                 <Route path="/a6/hello" exact={true}>
                     <HelloWorld/>
                 </Route>
-                <Route path="/a6/twitter/home" component={HomeScreen}/>
+
                 <Route path="/a6/twitter/explore" component={ExploreScreen}/>
 
             </div>

@@ -19,3 +19,16 @@
     width: 50px;
     height: 50px;
 }
+
+.wd-center-col {
+    position: relative;
+}
+
+.fa-search {
+    padding-left: 10px;
+}
+
+.wd-search-twitter {
+    margin-top: -30px;
+    padding-left: 30px;
+}

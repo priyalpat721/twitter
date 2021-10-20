@@ -25,3 +25,7 @@
 .list-group-item .active {
     background-color: #3fa9da;
 }
+
+.wd-home {
+    position: relative;
+}

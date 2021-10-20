@@ -1,12 +1,14 @@
 import PostSummaryList from "../PostSummaryList/PostSummaryLis";
+import "./explore.css"
+
 const ExploreComponent = () => {
     return(
         <div>
             <div className={"row mb-1"}>
                  <div className={"col-11 mt-2 mb-1"}>
-                        <div><label><i className={"fas fa-search"} style={{"paddingLeft": "10px"}} /></label></div>
+                        <div><label><i className={"fas fa-search"} /></label></div>
                         <div><input type ="text"
-                               className={"form-control rounded-pill"} style={{"marginTop": "-30px", "paddingLeft": "30px"}}
+                               className={"form-control rounded-pill wd-search-twitter"}
                                     placeholder="Search Twitter"/></div>
                     </div>
                     <div className={"col-1"}>

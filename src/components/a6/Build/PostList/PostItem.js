@@ -1,4 +1,5 @@
 import React from "react";
+import "./postItem.css"
 
 const PostItem = (
     {
@@ -28,11 +29,11 @@ const PostItem = (
                 <div className="col-xxl-1"/>
                 <div className="col-xxl-11 text-decoration-none">
                     <figure className="wd-picture">
-                        <img className="wd-img-post w-100" src={post.image} style={{"border": "1px solid rgb(110, 118, 125)", "borderRadius": "25px 25px 0px 0px"}} alt={""}/>
-                            <div className="wd-title text-white" style={{"border": "1px solid rgb(110, 118, 125)", "borderTop": "none"}}>
-                                <div className="wd-caption" style={{"paddingLeft": "15px"}}>{post.caption}</div>
-                                <div className="wd-caption text-dark text-decoration-none" style={{"paddingLeft": "15px"}}>{post.tweets}</div>
-                                <div style={{"paddingLeft": "15px"}}>{post.link}</div>
+                        <img className="wd-img-post w-100" src={post.image} alt={""}/>
+                            <div className="wd-title text-white">
+                                <div className="wd-caption">{post.caption}</div>
+                                <div className="wd-caption text-dark text-decoration-none">{post.tweets}</div>
+                                <div className="wd-caption text-dark">{post.link}</div>
                                 <div>
                                 </div>
                             </div>
