@@ -1,7 +1,7 @@
 import React from "react";
-import NavigationSidebar from "../NavigationSidebar/NavigationSidebar";
 import HomeComponent from "./HomeComponent";
-import PostSummaryList from "../PostSummaryList/PostSummaryLis";
+import PostSummaryList from "../../Build/PostSummaryList/PostSummaryLis";
+import NavigationSidebar from "../../Build/NavigationSidebar/NavigationSidebar";
 
 const HomeScreen = () => {
     return (
@@ -13,7 +13,7 @@ const HomeScreen = () => {
                  style={{"position": "relative"}}>
                 <HomeComponent/>
             </div>
-            <div className={"\"d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4"}>
+            <div className={"d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4"}>
                 <PostSummaryList/>
             </div>
         </div>

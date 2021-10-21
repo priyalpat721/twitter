@@ -1,5 +1,6 @@
-import PostSummaryList from "../PostSummaryList/PostSummaryLis";
-const ExploreComponent = () => {
+import PostSummaryList from "../../Build/PostSummaryList/PostSummaryLis";
+
+const ExploreComponent = ({posts}) => {
     return(
         <div>
             <div className={"row mb-1"}>
@@ -39,7 +40,7 @@ const ExploreComponent = () => {
                     <h3 className={"card-title text-white font-weight-bold"}>SpaceX's Starship</h3>
                 </div>
            </div>
-           <PostSummaryList/>
+           <PostSummaryList posts={posts}/>
         </div>
     );
 }

@@ -1,8 +1,7 @@
 import React from "react"
-import posts from "./posts.json";
 import PostItem from "./PostItem";
 
-const PostList = () => {
+const PostList = ({posts}) => {
     return (
             <ul className="list-group">
                 {

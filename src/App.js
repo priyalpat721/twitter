@@ -3,10 +3,10 @@ import './vendors/bootstrap/css/bootstrap.min.css';
 import './vendors/bootstrap/bootstrap.min.css';
 import './vendors/fontawesome/css/all.css';
 import Index from "./components/a6/Practice";
-import HomeScreen from "./components/a6/Build/HomeScreen/HomeScreen";
-import {BrowserRouter, Route} from "react-router-dom";
 import HelloWorld from "./components/a6/HelloWorld";
-import ExploreScreen from "./components/a6/Build/ExploreScreen/ExploreScreen";
+import {BrowserRouter, Route} from "react-router-dom";
+import ExploreScreen from "./components/a6/twitter/explore/ExploreScreen";
+import HomeScreen from "./components/a6/twitter/home/HomeScreen";
 
 function App() {
     return (
@@ -21,9 +21,7 @@ function App() {
                 <Route path="/a6/hello" exact={true}>
                     <HelloWorld/>
                 </Route>
-
-                <Route path="/a6/twitter/explore" component={ExploreScreen}/>
-
+                <Route path="/a6/twitter/explore" component={ExploreScreen} exact={true}/>
             </div>
         </BrowserRouter>
 
