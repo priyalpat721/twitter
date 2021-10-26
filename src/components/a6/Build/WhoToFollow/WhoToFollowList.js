@@ -3,7 +3,9 @@ import React from "react";
 
 const WhoToFollowList = ({who}) => {
     return (
+            <div>
             <ul className="list-group">
+                <li className="list-group-item">Who To Follow</li>
                 {
                     who.map((w, key) => {
                         return (
@@ -12,5 +14,6 @@ const WhoToFollowList = ({who}) => {
                     })
                 }
             </ul>
+                </div>
 ); }
 export default WhoToFollowList;
