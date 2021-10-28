@@ -2,6 +2,7 @@ import React from "react";
 import ExploreComponent from "./ExploreComponent.js";
 import NavigationSidebar from "../NavigationSidebar/NavigationSidebar";
 import WhoToFollowList from "../WhoToFollow/WhoToFollowList";
+import who from "../WhoToFollow/who";
 
 const ExploreScreen = () => {
     return(
@@ -13,7 +14,7 @@ const ExploreScreen = () => {
                 <ExploreComponent/>
             </div>
             <div className={"d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4"}>
-                <WhoToFollowList/>
+                <WhoToFollowList who={who}/>
             </div>
         </div>
     );

@@ -5,8 +5,9 @@ import './vendors/fontawesome/css/all.css';
 import Index from "./components/a6/Practice";
 import HelloWorld from "./components/a6/HelloWorld";
 import {BrowserRouter, Route} from "react-router-dom";
-import ExploreScreen from "./components/a6/twitter/explore/ExploreScreen";
-import HomeScreen from "./components/a6/twitter/home/HomeScreen";
+import HomeScreen from "./components/a6/Build/HomeScreen/HomeScreen";
+import ExploreScreen from "./components/a6/Build/ExploreScreen/ExploreScreen";
+
 
 function App() {
     return (

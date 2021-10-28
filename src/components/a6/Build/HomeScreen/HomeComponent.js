@@ -1,10 +1,11 @@
 import React from "react"
 import PostList from "../PostList/PostList";
+import posts from "../PostList/posts";
 
 const HomeComponent = () => {
     return(
             <div>
-                <PostList/>
+                <PostList posts={posts}/>
             </div>
     );
 }
