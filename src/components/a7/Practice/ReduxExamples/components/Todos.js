@@ -36,7 +36,6 @@ const Todos = () => {
         setTodo(newTodo);
     }
     return(
-
         <>
             <h3>Todos</h3>
             <ul className="list-group">
@@ -52,13 +51,15 @@ const Todos = () => {
 
 
                 {
-                    todos.map(todo =>
+                    todos.map((todo, key) =>
                         <li className="list-group-item">
                             <input checked={todo.done}
                                    onChange={(event) =>
                                        updateTodoClickHandler(
-                                           {...todo,
-                                               done: event.target.checked})}
+                                           {
+                                               ...todo,
+                                               done: event.target.checked
+                                           })}
                                    type="checkbox"/>
 
                             {todo.do}

@@ -25,7 +25,7 @@ const ProfileItem = ({profile}) => {
 
                 <div className="ms-3">
                     <div className="row">
-                        <div className="col-xxl-9 col-xl-8 col-lg-8 col-md-7 col-sm-6">
+                        <div className="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-8">
                             <img src={avatar}
                                  className="rounded-circle wd-profile-pic"/>
 
@@ -33,7 +33,7 @@ const ProfileItem = ({profile}) => {
                                 <div className="text-dark h6">@{profile.handle}</div>
                             </div>
                         </div>
-                        <div className="col-xxl-2 col-xl-4 col-lg-4 col-md-5 col-sm-6 mt-2">
+                        <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 mt-2">
                             <Link to="/a7/twitter/editProfile">
                                 <button className="btn btn-black rounded-pill border-white text-nowrap">
                                     <label className="fw-bold text-white">Edit Profile</label>
