@@ -110,9 +110,10 @@ const NavigationSidebar = (
                       ${active === 'more' ? 'active' :""}`}>
                         <a href="/" className="text-white">
                             <div className="row">
-                                <div className="col-2">
-                                    <span className="iconify" data-icon="gridicons:ellipsis-circle"/>
-                                </div>
+                                    <div className="col-2 fa-stack">
+                                        <i className="fa fa-circle fa-stack-1x"/>
+                                        <i className="fa fa-ellipsis-h fa-inverse fa-stack text-black-50"/>
+                                    </div>
                                 <div className="col-xxl-4 col-xl-4 d-none d-xl-block">
                                     <label>More</label>
                                 </div>

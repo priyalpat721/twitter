@@ -1,8 +1,8 @@
 import React from "react";
+import "./home.css";
 import NavigationSidebar from "../NavigationSidebar/NavigationSidebar";
 import HomeComponent from "./HomeComponent";
 import PostSummaryList from "../PostSummaryList/PostSummaryLis";
-import "./home.css";
 
 const HomeScreen = () => {
     return (
@@ -13,7 +13,7 @@ const HomeScreen = () => {
             <div className={"wd-home col-xxl-6 col-xl-6 col-lg-7 col-md-10 col-sm-10 mt-2 border-1 border-dark"}>
                 <HomeComponent/>
             </div>
-            <div className={"\"d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4"}>
+            <div className={"\"d-sm-none d-md-none d-lg-block d-md-block d-sm-block col-lg-4 col-xl-4"}>
                 <PostSummaryList/>
             </div>
         </div>

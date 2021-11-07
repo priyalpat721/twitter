@@ -9,10 +9,10 @@ const NavigationSidebar = (
         <div>
             <div className="nav-bar">
                 <ul className="list-group">
-                    <Link to="/a6/" className="list-group-item">
+                    <Link to="/a7/" className="list-group-item">
                             <i className="fab fa-twitter"/>
                         </Link>
-                    <Link to="/a6/twitter/home" className={`list-group-item text-white
+                    <Link to="/a7/twitter/home" className={`list-group-item text-white
                           ${active === 'home' ? 'active' :""}`}>
                             <div className="row">
                                 <div className="col-2">
@@ -24,7 +24,7 @@ const NavigationSidebar = (
                             </div>
                     </Link>
 
-                    <Link to="/a6/twitter/explore" className={`list-group-item text-white
+                    <Link to="/a7/twitter/explore" className={`list-group-item text-white
                           ${active === 'explore' ? 'active' :""}`}>
                             <div className="row">
                                 <div className="col-2">
@@ -92,9 +92,8 @@ const NavigationSidebar = (
                         </a>
                     </li>
 
-                    <li className={`list-group-item
+                    <Link to="/a7/twitter/profile" className={`list-group-item text-white
                           ${active === 'profile' ? 'active' :""}`}>
-                        <a href="/" className="text-white">
                             <div className="row">
                                 <div className="col-2">
                                     <i className="fas fa-user"/>
@@ -103,15 +102,15 @@ const NavigationSidebar = (
                                     <label>Profile</label>
                                 </div>
                             </div>
-                        </a>
-                    </li>
+                    </Link>
 
                     <li className={`list-group-item
                       ${active === 'more' ? 'active' :""}`}>
                         <a href="/" className="text-white">
                             <div className="row">
-                                <div className="col-2">
-                                    <span className="iconify" data-icon="gridicons:ellipsis-circle"/>
+                                <div className="col-2 fa-stack">
+                        <i className="fa fa-circle fa-stack-1x"/>
+                        <i className="fa fa-ellipsis-h fa-inverse fa-stack text-black-50"/>
                                 </div>
                                 <div className="col-xxl-4 col-xl-4 d-none d-xl-block">
                                     <label>More</label>

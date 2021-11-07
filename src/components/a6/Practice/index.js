@@ -9,6 +9,7 @@ import TodoList from "./Todo/TodoList";
 const Practice = () => {
     return(
         <div>
+            <h1>Assignment 6</h1>
             <h1>Practice</h1>
             <Link to="/a6/twitter/home">
                 Home

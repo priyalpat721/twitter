@@ -84,7 +84,7 @@ const NavigationSidebar = (active) => {
                         </a>
                     </li>
     
-                    <li class="list-group-item ${active === 'profile' ? 'active' : ''}">
+                    <li class="list-group-item ${active === 'profileReducer' ? 'active' : ''}">
                         <a href="/" class="text-white">
                         <div class="row">
                             <div class="col-2">

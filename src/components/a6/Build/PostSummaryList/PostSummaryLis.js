@@ -1,5 +1,5 @@
-import PostSummaryItem from "./PostSummaryItem";
 import post from "./posts.json"
+import PostSummaryItem from "./PostSummaryItem";
 
 const PostSummaryList = () => {
     return (

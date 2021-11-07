@@ -1,0 +1,93 @@
+import React, {useState} from "react";
+import './profile.css';
+import {Link} from "react-router-dom";
+
+
+const ProfileItem = ({profile}) => {
+    let dob = new Date(profile.dateOfBirth);
+    let avatar = profile.profilePicture;
+    let banner = profile.bannerPicture;
+    let joined = profile.dateJoined;
+
+
+    return (
+        <div>
+            <div className="mb-4">
+                <div className="row">
+                    <Link to="/a7/twitter/home">
+                        <i className="fas fa-arrow-left col-1 pt-2 ms-2 text-white"/>
+                    </Link>
+                    <div className="h5 col-10">{profile.firstName} {profile.lastName}</div>
+
+                </div>
+                <img src={banner}
+                     className="wd-banner-pic"/>
+
+                <div className="ms-3">
+                    <div className="row">
+                        <div className="col-xxl-9 col-xl-8 col-lg-8 col-md-7 col-sm-6">
+                            <img src={avatar}
+                                 className="rounded-circle wd-profile-pic"/>
+
+                            <div className="text-white h5">{profile.firstName} {profile.lastName}
+                                <div className="text-dark h6">@{profile.handle}</div>
+                            </div>
+                        </div>
+                        <div className="col-xxl-2 col-xl-4 col-lg-4 col-md-5 col-sm-6 mt-2">
+                            <Link to="/a7/twitter/editProfile">
+                                <button className="btn btn-black rounded-pill border-white text-nowrap">
+                                    <label className="fw-bold text-white">Edit Profile</label>
+                                </button>
+                            </Link>
+
+                        </div>
+                    </div>
+                    <div className="text-white mt-2 mb-2">
+                        {profile.bio}
+                    </div>
+                    <div className="row mb-2">
+                        <div className="col">
+                            <i className="fas fa-map-marker-alt me-1" aria-hidden="true"/>
+                            <label className="me-3">{profile.location}</label>
+
+                            <i className="fas fa-birthday-cake me-1" aria-hidden="true"/>
+                            <label>Born {dob.toLocaleDateString(undefined, {month: 'long'})}
+                            </label>
+                            <label className="ms-1">{dob.getDate()},
+                            </label>
+                            <label className="ms-1 me-3">{dob.getFullYear()}
+                            </label>
+
+                            <i className="far fa-calendar-alt me-1"/>
+                            <label className="ms-1">
+                                Joined {joined}
+                            </label>
+
+                        </div>
+                        <div className="col-3">
+                        </div>
+                    </div>
+                    <div>
+                <span className="me-4">
+                    <label className="fw-bold me-1 text-white">
+                        {profile.followingCount}
+                    </label>
+                    <label>
+                        Following
+                    </label>
+                </span>
+                        <span>
+                    <label className="fw-bold me-1 text-white">
+                        {profile.followersCount}
+                    </label>
+                    <label>
+                        Followers
+                    </label>
+                </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+export default ProfileItem;

@@ -13,7 +13,7 @@ const WhoToFollowListItem = (
                   <div className="col-xxl-6 col-lg-6 text-nowrap ms-1">
                       <label>{who.userName}</label>
                       <i className="fas fa-check-circle fa-xs"/>
-                      <br></br>
+                      <br/>
                       <label>{who.handle}</label>
                   </div>
                   <div className="col-xxl-3 col-lg-3 ms-0">

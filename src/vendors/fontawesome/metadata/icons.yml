@@ -99,7 +99,7 @@ address-card:
       - id
       - identification
       - postcard
-      - profile
+      - profileReducer
   styles:
     - solid
     - regular
@@ -6953,7 +6953,7 @@ female:
     terms:
       - human
       - person
-      - profile
+      - profileReducer
       - user
       - woman
   styles:
@@ -10589,7 +10589,7 @@ id-badge:
       - contact
       - identification
       - license
-      - profile
+      - profileReducer
   styles:
     - solid
     - regular
@@ -10610,7 +10610,7 @@ id-card:
       - document
       - identification
       - issued
-      - profile
+      - profileReducer
   styles:
     - solid
     - regular
@@ -10628,7 +10628,7 @@ id-card-alt:
       - document
       - identification
       - issued
-      - profile
+      - profileReducer
   styles:
     - solid
   unicode: f47f
@@ -12084,7 +12084,7 @@ male:
       - human
       - man
       - person
-      - profile
+      - profileReducer
       - user
   styles:
     - solid
@@ -20073,7 +20073,7 @@ user:
       - human
       - man
       - person
-      - profile
+      - profileReducer
   styles:
     - solid
     - regular
@@ -20093,7 +20093,7 @@ user-alt:
       - human
       - man
       - person
-      - profile
+      - profileReducer
   styles:
     - solid
   unicode: f406
@@ -20110,7 +20110,7 @@ user-alt-slash:
       - human
       - man
       - person
-      - profile
+      - profileReducer
   styles:
     - solid
   unicode: f4fa
@@ -20162,7 +20162,7 @@ user-circle:
       - human
       - man
       - person
-      - profile
+      - profileReducer
   styles:
     - solid
     - regular
@@ -20292,7 +20292,7 @@ user-md:
       - nurse
       - occupation
       - physician
-      - profile
+      - profileReducer
       - surgeon
   styles:
     - solid
