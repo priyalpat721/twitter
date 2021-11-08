@@ -2,10 +2,25 @@ import React, {useState} from 'react';
 import {useSelector, useDispatch} from "react-redux";
 import './profile.css';
 import {Link} from "react-router-dom";
+import profileData from "../../../../data/profile.json";
 
 const profileState = (state) => state.profile;
+const [profileD] = profileData;
+const date = profileD.dateOfBirth;
+const dateSplit = date.split("/");
+const year = dateSplit[2];
+let month = '';
+if(dateSplit[0].length === 1) {
+    month = 0+dateSplit[0];
+}
+else {
+    month = dateSplit[0];
+}
+const day = parseInt(dateSplit[1]);
+const newDate = year+'-'+month+'-'+day;
+console.log(newDate.toString());
 
-const EditProfile = ({edit}) => {
+const EditProfile = () => {
     const edits = useSelector(profileState);
     let [firstName, setFirstName] = useState(edits.firstName);
     let [lastName, setLastName] = useState(edits.lastName);
@@ -13,8 +28,6 @@ const EditProfile = ({edit}) => {
     let [location, setLocation] = useState(edits.location);
     let [website, setWebsite] = useState(edits.website);
     let [dateOfBirth, setDateOfBirth] = useState(edits.dateOfBirth);
-
-    console.log(firstName);
 
     const dispatch = useDispatch();
 
@@ -68,34 +81,34 @@ const EditProfile = ({edit}) => {
             <form className="form-floating">
             <input className="form-control bg-black border-white border-1 text-white mt-3 mb-3"
                    type="text"
-                   value={firstName}
-                   onChange={(event) => setFirstName(event.target.value)}/>
+                   defaultValue={profileD.firstName}
+                   onChange={event => setFirstName(event.target.value)}/>
                 <label htmlFor="First Name">First Name</label>
             </form>
             <form className="form-floating">
             <input className="form-control bg-black border-white border-1 text-white mt-3 mb-3"
                    type="text"
-                   value={lastName}
+                   defaultValue={profileD.lastName}
                    onChange={(event) => setLastName(event.target.value)}/>
                 <label htmlFor="Last Name">Last Name</label>
             </form>
             <form className="form-floating">
             <textarea className="form-control bg-black border-white border-1 text-white mt-3 mb-3 h-50"
-                      value={bio}
+                      defaultValue={profileD.bio}
                       onChange={(event) => setBio(event.target.value)}/>
                 <label htmlFor="Bio">Bio</label>
             </form>
             <form className="form-floating">
             <input className="form-control bg-black border-white border-1 text-white mt-3 mb-3"
                    type="text"
-                   value={location}
+                   defaultValue={profileD.location}
                    onChange={(event) => setLocation(event.target.value)}/>
                 <label htmlFor="Location">Location</label>
             </form>
             <form className="form-floating">
                 <input className="form-control bg-black border-white border-1 text-white mt-3 mb-3"
                        type="text"
-                       value={website}
+                       defaultValue={profileD.website}
                        onChange={(event) => setWebsite(event.target.value)}/>
                 <label htmlFor="Website">Website</label>
             </form>
@@ -103,7 +116,7 @@ const EditProfile = ({edit}) => {
                 <input type="date"
                        className="form-control border-white border-1 mt-3 mb-3 bg-black"
                        id="wd-date-color"
-                       value={dateOfBirth}
+                       defaultValue={newDate}
                        onChange={(event) => setDateOfBirth(event.target.value)}/>
                 <label htmlFor="Date of Birth">Date of Birth</label>
             </form>

@@ -4,11 +4,9 @@ import {Link} from "react-router-dom";
 
 
 const ProfileItem = ({profile}) => {
-    let dob = new Date(profile.dateOfBirth);
     let avatar = profile.profilePicture;
     let banner = profile.bannerPicture;
     let joined = profile.dateJoined;
-
 
     return (
         <div>
@@ -51,18 +49,13 @@ const ProfileItem = ({profile}) => {
                             <label className="me-3">{profile.location}</label>
 
                             <i className="fas fa-birthday-cake me-1" aria-hidden="true"/>
-                            <label>Born {dob.toLocaleDateString(undefined, {month: 'long'})}
-                            </label>
-                            <label className="ms-1">{dob.getDate()},
-                            </label>
-                            <label className="ms-1 me-3">{dob.getFullYear()}
+                            <label>Born {profile.dateOfBirth}
                             </label>
 
-                            <i className="far fa-calendar-alt me-1"/>
+                            <i className="far fa-calendar-alt ms-3"/>
                             <label className="ms-1">
                                 Joined {joined}
                             </label>
-
                         </div>
                         <div className="col-3">
                         </div>

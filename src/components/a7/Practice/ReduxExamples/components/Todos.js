@@ -52,7 +52,7 @@ const Todos = () => {
 
                 {
                     todos.map((todo, key) =>
-                        <li className="list-group-item">
+                        <li className="list-group-item" key={key}>
                             <input checked={todo.done}
                                    onChange={(event) =>
                                        updateTodoClickHandler(
