@@ -17,7 +17,7 @@ const WhatsHappening = () => {
                 <tbody>
                     <tr>
                         <td className="wd-table-pic">
-                            <img src={'/images/elon.jpg'}
+                            <img src={'/images/react.png'}
                                  className="rounded-circle wd-image"/>
                         </td>
                         <td className="w-100">
