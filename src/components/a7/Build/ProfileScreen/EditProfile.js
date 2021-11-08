@@ -7,13 +7,14 @@ const profileState = (state) => state.profile;
 
 const EditProfile = () => {
     const edits = useSelector(profileState);
-
     let [firstName, setFirstName] = useState(edits.firstName);
     let [lastName, setLastName] = useState(edits.lastName);
     let [bio, setBio] = useState(edits.bio);
     let [location, setLocation] = useState(edits.location);
     let [website, setWebsite] = useState(edits.website);
     let [dateOfBirth, setDateOfBirth] = useState(edits.dateOfBirth);
+
+    console.log(firstName);
 
     const dispatch = useDispatch();
 
