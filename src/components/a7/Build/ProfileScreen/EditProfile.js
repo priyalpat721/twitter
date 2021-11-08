@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 
 const profileState = (state) => state.profile;
 
-const EditProfile = () => {
+const EditProfile = ({edit}) => {
     const edits = useSelector(profileState);
     let [firstName, setFirstName] = useState(edits.firstName);
     let [lastName, setLastName] = useState(edits.lastName);
