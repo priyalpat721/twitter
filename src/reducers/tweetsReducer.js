@@ -43,8 +43,7 @@ const tweetsReducer = (state = posts, action) => {
             };
             return([
                 {
-                    ...tweet,
-                    "tweet": action.tweet
+                    ...tweet
                 },
                 ...state
             ]);

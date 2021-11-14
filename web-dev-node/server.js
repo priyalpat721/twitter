@@ -13,14 +13,12 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Credentials", "true");
     next();
 });
-
-require('./services/tweets-service')(app);
-require('./services/movies-service')(app);
 app.get('/hello', (req, res) => {
     res.send('Hello World!');
 });
 
-
+require('./services/movies-service')(app);
+require('./services/tweets-service')(app);
 
 app.listen(4000);
 
