@@ -5,6 +5,7 @@ import ReduxExamples from "./ReduxExamples/components";
 const Practice = () => {
     return(
         <div>
+            <h1>Assignment 7</h1>
             <h1>Practice</h1>
             <Link to="/a7/twitter/home">Build</Link>
             <ReduxExamples/>

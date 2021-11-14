@@ -18,7 +18,6 @@ else {
 }
 const day = parseInt(dateSplit[1]);
 const newDate = year+'-'+month+'-'+day;
-console.log(newDate.toString());
 
 const EditProfile = () => {
     const edits = useSelector(profileState);

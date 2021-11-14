@@ -1,0 +1,13 @@
+.wd-img-post{
+    border: 1px solid rgb(110, 118, 125);
+    border-radius: 25px 25px 0 0;
+}
+
+.wd-title {
+    border: 1px solid rgb(110, 118, 125);
+    border-top: none;
+}
+
+.wd-caption {
+    padding-left: 15px;
+}

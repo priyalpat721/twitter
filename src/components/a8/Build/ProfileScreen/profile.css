@@ -1,0 +1,20 @@
+.wd-profile-pic{
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    border: 3px solid black;
+    background-color: black;
+}
+
+.wd-banner-pic {
+    width: 100%;
+    height: 200px;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+#wd-date-color{
+    color: White;
+}
