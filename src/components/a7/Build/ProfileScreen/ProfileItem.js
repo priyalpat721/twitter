@@ -12,10 +12,16 @@ const ProfileItem = ({profile}) => {
         <div>
             <div className="mb-4">
                 <div className="row">
-                    <Link to="/a7/twitter/home">
-                        <i className="fas fa-arrow-left col-1 pt-2 ms-2 text-white"/>
-                    </Link>
-                    <div className="h5 col-10">{profile.firstName} {profile.lastName}</div>
+                   <div className="col-1">
+                       <Link to="/a7/twitter/home">
+                           <i className="fas fa-arrow-left col-1 pt-2 text-white"/>
+                       </Link>
+                   </div>
+                    <div className="col-10">
+                        <div className="h5">{profile.firstName} {profile.lastName}</div>
+                        <div className="wd-normal">5196 Tweets</div>
+                    </div>
+
 
                 </div>
                 <img src={banner}

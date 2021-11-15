@@ -2,6 +2,9 @@ import profileData from "../data/profile.json";
 
 const profileReducer = (state = profileData, action) => {
     switch (action.type) {
+        case 'get-profile':
+            return (action);
+
         case 'save':
             const profile = [{
                 "firstName": action.firstName,

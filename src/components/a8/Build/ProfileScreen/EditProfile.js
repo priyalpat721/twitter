@@ -58,14 +58,14 @@ const EditProfile = () => {
         <>
             <div className="row">
                 <div className="col-1">
-                    <Link to="/a7/twitter/profile">
+                    <Link to="/a8/twitter/profile">
                         <i className="fas fa-times text-white"
                            onClick={exitEditorClickHandler}/>
                     </Link>
                 </div>
                 <div className="text-white fw-bold col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-8">Edit Profile</div>
                 <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 mt-2">
-                    <Link to="/a7/twitter/profile">
+                    <Link to="/a8/twitter/profile">
                         <button className="btn btn-black rounded-pill text-nowrap bg-white text-black"
                                 onClick={saveEditClickHandler}>
                             <label className="fw-bold text-black">Save</label>

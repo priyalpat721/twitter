@@ -1,7 +1,7 @@
 let tweets = require('../data/tweets.json');
 
 module.exports = (app) => {
-    const findAllTweets = (req, res) => {
+    const fetchAllTweets = (req, res) => {
         res.json(tweets);
     }
 
@@ -57,7 +57,7 @@ module.exports = (app) => {
 
     app.put('/api/tweets/:id/like', likeTweet);
     app.delete('/api/tweets/:id', deleteTweet);
-    app.get('/api/tweets', findAllTweets);
+    app.get('/api/tweets', fetchAllTweets);
     app.post('/api/tweets', postNewTweet);
 };
 
