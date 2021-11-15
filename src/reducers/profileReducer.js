@@ -3,10 +3,10 @@ import profileData from "../data/profile.json";
 const profileReducer = (state = profileData, action) => {
     switch (action.type) {
         case 'get-profile':
-            return (action);
+            return (action.profile[0]);
 
         case 'save':
-            const profile = [{
+            const profile = {
                 "firstName": action.firstName,
                 "lastName": action.lastName,
                 "bio": action.bio,
@@ -19,7 +19,7 @@ const profileReducer = (state = profileData, action) => {
                 "dateJoined": "11/2021",
                 "followingCount": 123,
                 "followersCount": 234
-            }]
+            }
             return profile;
 
         case 'cancel-edit':

@@ -5,41 +5,31 @@ import {Link} from "react-router-dom";
 import profileData from "../../../../data/profile.json";
 
 const profileState = (state) => state.profile;
-const [profileD] = profileData;
-const date = profileD.dateOfBirth;
-const dateSplit = date.split("/");
-const year = dateSplit[2];
-let month = '';
-if(dateSplit[0].length === 1) {
-    month = 0+dateSplit[0];
-}
-else {
-    month = dateSplit[0];
-}
-const day = parseInt(dateSplit[1]);
-const newDate = year+'-'+month+'-'+day;
 
 const EditProfile = () => {
     const edits = useSelector(profileState);
-    let [firstName, setFirstName] = useState(edits.firstName);
-    let [lastName, setLastName] = useState(edits.lastName);
-    let [bio, setBio] = useState(edits.bio);
-    let [location, setLocation] = useState(edits.location);
-    let [website, setWebsite] = useState(edits.website);
-    let [dateOfBirth, setDateOfBirth] = useState(edits.dateOfBirth);
-
+    let [values, setValues] = useState({
+        firstName:profileData.firstName,
+        lastName:profileData.lastName,
+        bio:profileData.bio,
+        location:profileData.location,
+        website:profileData.website,
+        dateOfBirth:profileData.dateOfBirth,
+        emailAddress:profileData.emailAddress,
+        userName:profileData.handle
+    })
     const dispatch = useDispatch();
 
     const saveEditClickHandler = () => {
         dispatch({
             type: 'save',
             ...edits,
-            firstName: firstName,
-            lastName: lastName,
-            bio: bio,
-            location: location,
-            website: website,
-            dateOfBirth: dateOfBirth,
+            firstName: values.firstName,
+            lastName: values.lastName,
+            bio: values.bio,
+            location: values.location,
+            website: values.website,
+            dateOfBirth: values.dateOfBirth,
             profilePicture: "../../../images/cat.jpg",
             bannerPicture: "../../../images/banner.jpg",
         });
@@ -78,45 +68,45 @@ const EditProfile = () => {
             <img src="../../../images/cat.jpg"
                  className="rounded-circle wd-profile-pic"/>
             <form className="form-floating">
-            <input className="form-control bg-black border-white border-1 text-white mt-3 mb-3"
-                   type="text"
-                   defaultValue={profileD.firstName}
-                   onChange={event => setFirstName(event.target.value)}/>
+                <input className="form-control bg-black border-white border-1 text-white mt-3 mb-3"
+                       type="text"
+                       defaultValue={profileData.firstName}
+                       onChange={event => setValues({...values, firstName: event.target.value})}/>
                 <label htmlFor="First Name">First Name</label>
             </form>
             <form className="form-floating">
-            <input className="form-control bg-black border-white border-1 text-white mt-3 mb-3"
-                   type="text"
-                   defaultValue={profileD.lastName}
-                   onChange={(event) => setLastName(event.target.value)}/>
+                <input className="form-control bg-black border-white border-1 text-white mt-3 mb-3"
+                       type="text"
+                       defaultValue={profileData.lastName}
+                       onChange={(event) => setValues({...values, lastName: event.target.value})}/>
                 <label htmlFor="Last Name">Last Name</label>
             </form>
             <form className="form-floating">
             <textarea className="form-control bg-black border-white border-1 text-white mt-3 mb-3 h-50"
-                      defaultValue={profileD.bio}
-                      onChange={(event) => setBio(event.target.value)}/>
+                      defaultValue={profileData.bio}
+                      onChange={(event) => setValues({...values, bio: event.target.value})}/>
                 <label htmlFor="Bio">Bio</label>
             </form>
             <form className="form-floating">
-            <input className="form-control bg-black border-white border-1 text-white mt-3 mb-3"
-                   type="text"
-                   defaultValue={profileD.location}
-                   onChange={(event) => setLocation(event.target.value)}/>
+                <input className="form-control bg-black border-white border-1 text-white mt-3 mb-3"
+                       type="text"
+                       defaultValue={profileData.location}
+                       onChange={(event) => setValues({...values, location: event.target.value})}/>
                 <label htmlFor="Location">Location</label>
             </form>
             <form className="form-floating">
                 <input className="form-control bg-black border-white border-1 text-white mt-3 mb-3"
                        type="text"
-                       defaultValue={profileD.website}
-                       onChange={(event) => setWebsite(event.target.value)}/>
+                       defaultValue={profileData.website}
+                       onChange={(event) => setValues({...values, website: event.target.value})}/>
                 <label htmlFor="Website">Website</label>
             </form>
             <form className="form-floating">
                 <input type="date"
                        className="form-control border-white border-1 mt-3 mb-3 bg-black"
                        id="wd-date-color"
-                       defaultValue={newDate}
-                       onChange={(event) => setDateOfBirth(event.target.value)}/>
+                       defaultValue={profileData.dateOfBirth}
+                       onChange={(event) => setValues({...values, dateOfBirth: event.target.value})}/>
                 <label htmlFor="Date of Birth">Date of Birth</label>
             </form>
         </>

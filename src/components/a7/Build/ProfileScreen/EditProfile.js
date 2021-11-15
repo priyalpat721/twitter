@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import profileData from "../../../../data/profile.json";
 
 const profileState = (state) => state.profile;
-const [profileD] = profileData;
+const profileD = profileData;
 const date = profileD.dateOfBirth;
 const dateSplit = date.split("/");
 const year = dateSplit[2];

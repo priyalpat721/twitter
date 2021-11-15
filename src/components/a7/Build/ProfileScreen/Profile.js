@@ -7,14 +7,7 @@ const profileState = (state) => state.profile;
 
 const Profile = () => {
     const p = useSelector(profileState);
-    return (
-        <>
-            {
-                p.map((profile, key) =>
-                    <ProfileItem profile={profile} key={key}/>
-                )
-            }
-        </>
-    );
+    return <ProfileItem profile={p}/>
+
 };
 export default Profile;
