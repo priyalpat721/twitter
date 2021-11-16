@@ -7,8 +7,7 @@ export const getCurrentProfile = (dispatch) => {
         .then((response) =>
             response.json())
         .then((profile) => {
-            // console.log("profile");
-            // console.log(profile);
+
             dispatch({
                 type: 'get-profile',
                 profile: profile
@@ -19,6 +18,6 @@ export const getCurrentProfile = (dispatch) => {
 export const updateCurrentProfile = () => {
     return fetch('http://localhost:4000/api/profile')
         .then((response) => {
-            response.json().then("");
+            response.json().then();
         })
 }

@@ -3,7 +3,7 @@ import profileData from "../data/profile.json";
 const profileReducer = (state = profileData, action) => {
     switch (action.type) {
         case 'get-profile':
-            return (action.profile[0]);
+            return (action.profile);
 
         case 'save':
             const profile = {

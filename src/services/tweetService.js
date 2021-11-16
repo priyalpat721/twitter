@@ -43,5 +43,3 @@ export const likeTweet = (dispatch, tweet) =>
                 type: 'like-tweet',
                 tweet
             }));
-
-

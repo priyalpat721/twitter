@@ -8,7 +8,9 @@ const selectAllTweets = (state) => state.tweets;
 const TweetList = () => {
     const tweets = useSelector(selectAllTweets);
     const dispatch = useDispatch();
-    useEffect(() => fetchAllTweets(dispatch), [dispatch])
+    useEffect(() => fetchAllTweets(dispatch));
+
+
 
     return(
         <ul className="list-group">
