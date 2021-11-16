@@ -5,17 +5,21 @@ const profileReducer = (state = profileData, action) => {
         case 'get-profile':
             return (action.profile);
 
+        case 'save8':
+            console.log("Actions values: ", action.values);
+            return action.values;
+
         case 'save':
             const profile = {
                 "firstName": action.firstName,
                 "lastName": action.lastName,
-                "bio": action.bio,
-                "location": action.location,
-                "website": action.website,
-                "dateOfBirth": action.dateOfBirth,
+                "handle": "pripat21",
                 "profilePicture": action.profilePicture,
                 "bannerPicture": action.bannerPicture,
-                "handle": "pripat21",
+                "bio": action.bio,
+                "website": action.website,
+                "location": action.location,
+                "dateOfBirth": action.dateOfBirth,
                 "dateJoined": "11/2021",
                 "followingCount": 123,
                 "followersCount": 234
@@ -23,9 +27,9 @@ const profileReducer = (state = profileData, action) => {
             return profile;
 
         case 'cancel-edit':
-            return state;
+            return action;
         case 'exit-editor':
-            return state;
+            return action;
         default:
             return state;
     }

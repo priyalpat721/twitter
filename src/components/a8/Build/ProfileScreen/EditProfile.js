@@ -3,6 +3,7 @@ import {useSelector, useDispatch} from "react-redux";
 import './profile.css';
 import {Link} from "react-router-dom";
 import profileData from "../../../../data/profile.json";
+import {updateCurrentProfile} from "../../../../services/profileService";
 
 const profileState = (state) => state.profile;
 
@@ -11,31 +12,21 @@ const EditProfile = () => {
     let [values, setValues] = useState({
         firstName:profileData.firstName,
         lastName:profileData.lastName,
+        handle: edits.handle,
+        profilePicture: "../../../images/cat.jpg",
+        bannerPicture: "../../../images/banner.jpg",
         bio:profileData.bio,
-        location:profileData.location,
         website:profileData.website,
+        location:profileData.location,
         dateOfBirth:profileData.dateOfBirth,
-        emailAddress:profileData.emailAddress,
-        userName:profileData.handle
+        dateJoined: edits.dateJoined,
+        followingCount: edits.followingCount,
+        followersCount: edits.followersCount
     })
     const dispatch = useDispatch();
 
     const saveEditClickHandler = () => {
-        dispatch({
-            type: 'save',
-            ...edits,
-            firstName: values.firstName,
-            lastName: values.lastName,
-            bio: values.bio,
-            location: values.location,
-            website: values.website,
-            dateOfBirth: values.dateOfBirth,
-            profilePicture: "../../../images/cat.jpg",
-            bannerPicture: "../../../images/banner.jpg",
-        });
-        dispatch({
-            type: 'cancel-edit'
-        });
+        updateCurrentProfile(dispatch, values).then(r => "");
     }
 
     const exitEditorClickHandler = () => {
