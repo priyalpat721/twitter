@@ -11,8 +11,9 @@ import Practice7 from "./components/a7/Practice";
 import HomeScreen7 from "./components/a7/Build/HomeScreen/HomeScreen";
 import ExploreScreen7 from "./components/a7/Build/ExploreScreen/ExploreScreen";
 import whoReducer from "./reducers/whoReducer";
-import tweetsReducer from "./reducers/tweetsReducer";
+import tweetsReducer7 from "./reducers/tweetsReducer7";
 import profileReducer from "./reducers/profileReducer"
+import tweetsReducer from "./reducers/tweetsReducer";
 import {combineReducers, createStore} from "redux";
 import {Provider} from "react-redux";
 import React from "react";
@@ -24,7 +25,7 @@ import EditScreen from "./components/a8/Build/ProfileScreen/EditScreen";
 import HomeScreen from "./components/a8/Build/HomeScreen/HomeScreen";
 import ExploreScreen from "./components/a8/Build/ExploreScreen/ExploreScreen";
 
-const reducer = combineReducers({tweets: tweetsReducer, who: whoReducer, profile:profileReducer})
+const reducer = combineReducers({tweets: tweetsReducer7, who: whoReducer, profile:profileReducer, tweet: tweetsReducer})
 const store = createStore(reducer);
 
 

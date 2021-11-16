@@ -1,6 +1,6 @@
 import posts from '../data/tweets.json';
 
-const tweetsReducer = (state = posts, action) => {
+const tweetsReducer7 = (state = posts, action) => {
     switch (action.type) {
         case 'fetch-all-tweets':
             return(action.tweets);
@@ -43,7 +43,8 @@ const tweetsReducer = (state = posts, action) => {
             };
             return([
                 {
-                    ...tweet
+                    ...tweet,
+                    "tweet": action.tweet
                 },
                 ...state
             ]);
@@ -52,4 +53,4 @@ const tweetsReducer = (state = posts, action) => {
     }
 };
 
-export default tweetsReducer;
+export default tweetsReducer7;
