@@ -5,10 +5,13 @@ module.exports = (app) => {
         res.json(profile);
     }
 
-    const updateCurrentProfile = (req, res) => res.json(profile);
+    const updateCurrentProfile = (req, res) => {
+        profile = req.body;
+        res.json(req.body);
+    }
 
 
-    app.get('/api/profile', getCurrentProfile);
-    app.put('/api/profile/edit', updateCurrentProfile);
+    app.get("/api/profile", getCurrentProfile);
+    app.put("/api/profile", updateCurrentProfile);
 }
 

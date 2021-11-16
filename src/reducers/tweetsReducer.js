@@ -24,7 +24,7 @@ const tweetsReducer = (state = posts, action) => {
         case 'delete-tweet':
             return state.filter(tweet => tweet._id !== action.tweet._id)
 
-        case 'create-tweet7':
+        case 'create-tweet':
             const tweet = {
                 "_id": (new Date()).getTime() + "",
                 "topic": "Web Development",

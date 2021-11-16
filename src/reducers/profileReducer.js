@@ -6,11 +6,10 @@ const profileReducer = (state = profileData, action) => {
             return (action.profile);
 
         case 'save8':
-            console.log("Actions values: ", action.values);
             return action.values;
 
         case 'save':
-            const profile = {
+            const profile = [{
                 "firstName": action.firstName,
                 "lastName": action.lastName,
                 "handle": "pripat21",
@@ -23,13 +22,15 @@ const profileReducer = (state = profileData, action) => {
                 "dateJoined": "11/2021",
                 "followingCount": 123,
                 "followersCount": 234
-            }
+            }]
             return profile;
 
         case 'cancel-edit':
-            return action;
+            return state;
         case 'exit-editor':
-            return action;
+            return action.values;
+        case 'exit-editor7':
+            return state;
         default:
             return state;
     }

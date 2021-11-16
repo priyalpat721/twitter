@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {useSelector, useDispatch} from "react-redux";
 import './profile.css';
 import {Link} from "react-router-dom";
-import profileData from "../../../../data/profile.json";
 import {updateCurrentProfile} from "../../../../services/profileService";
 
 const profileState = (state) => state.profile;
@@ -10,15 +9,15 @@ const profileState = (state) => state.profile;
 const EditProfile = () => {
     const edits = useSelector(profileState);
     let [values, setValues] = useState({
-        firstName:profileData.firstName,
-        lastName:profileData.lastName,
+        firstName:edits.firstName,
+        lastName:edits.lastName,
         handle: edits.handle,
         profilePicture: "../../../images/cat.jpg",
         bannerPicture: "../../../images/banner.jpg",
-        bio:profileData.bio,
-        website:profileData.website,
-        location:profileData.location,
-        dateOfBirth:profileData.dateOfBirth,
+        bio:edits.bio,
+        website:edits.website,
+        location:edits.location,
+        dateOfBirth:edits.dateOfBirth,
         dateJoined: edits.dateJoined,
         followingCount: edits.followingCount,
         followersCount: edits.followersCount
@@ -31,7 +30,8 @@ const EditProfile = () => {
 
     const exitEditorClickHandler = () => {
         dispatch({
-            type: 'exit-editor'
+            type: 'exit-editor',
+            values
         });
     }
 
@@ -61,34 +61,34 @@ const EditProfile = () => {
             <form className="form-floating">
                 <input className="form-control bg-black border-white border-1 text-white mt-3 mb-3"
                        type="text"
-                       defaultValue={profileData.firstName}
+                       defaultValue={values.firstName}
                        onChange={event => setValues({...values, firstName: event.target.value})}/>
                 <label htmlFor="First Name">First Name</label>
             </form>
             <form className="form-floating">
                 <input className="form-control bg-black border-white border-1 text-white mt-3 mb-3"
                        type="text"
-                       defaultValue={profileData.lastName}
+                       defaultValue={values.lastName}
                        onChange={(event) => setValues({...values, lastName: event.target.value})}/>
                 <label htmlFor="Last Name">Last Name</label>
             </form>
             <form className="form-floating">
             <textarea className="form-control bg-black border-white border-1 text-white mt-3 mb-3 h-50"
-                      defaultValue={profileData.bio}
+                      defaultValue={values.bio}
                       onChange={(event) => setValues({...values, bio: event.target.value})}/>
                 <label htmlFor="Bio">Bio</label>
             </form>
             <form className="form-floating">
                 <input className="form-control bg-black border-white border-1 text-white mt-3 mb-3"
                        type="text"
-                       defaultValue={profileData.location}
+                       defaultValue={values.location}
                        onChange={(event) => setValues({...values, location: event.target.value})}/>
                 <label htmlFor="Location">Location</label>
             </form>
             <form className="form-floating">
                 <input className="form-control bg-black border-white border-1 text-white mt-3 mb-3"
                        type="text"
-                       defaultValue={profileData.website}
+                       defaultValue={values.website}
                        onChange={(event) => setValues({...values, website: event.target.value})}/>
                 <label htmlFor="Website">Website</label>
             </form>
@@ -96,7 +96,7 @@ const EditProfile = () => {
                 <input type="date"
                        className="form-control border-white border-1 mt-3 mb-3 bg-black"
                        id="wd-date-color"
-                       defaultValue={profileData.dateOfBirth}
+                       defaultValue={values.dateOfBirth}
                        onChange={(event) => setValues({...values, dateOfBirth: event.target.value})}/>
                 <label htmlFor="Date of Birth">Date of Birth</label>
             </form>

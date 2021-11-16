@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import './profile.css';
 import {useDispatch, useSelector} from "react-redux";
 import {getCurrentProfile} from "../../../../services/profileService";
@@ -9,12 +9,11 @@ const profileState = (state) => state.profile;
 const Profile = () => {
     const dispatch = useDispatch();
     const profile = useSelector(profileState);
-
     let avatar = profile.profilePicture;
     let banner = profile.bannerPicture;
     let joined = profile.dateJoined;
 
-    useEffect(() => getCurrentProfile(dispatch, profile), [dispatch]);
+    useEffect(() => getCurrentProfile(dispatch), [dispatch]);
 
 
     return (

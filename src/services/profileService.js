@@ -1,20 +1,19 @@
-const PROFILE_API = 'http://localhost:4000/api/profile';
-export const getCurrentProfile = (dispatch, profile) => {
+export const getCurrentProfile = (dispatch) => {
 
-    return fetch(PROFILE_API)
+    return fetch('http://localhost:4000/api/profile')
         .then((response) =>
             response.json())
         .then((profile) => {
 
             dispatch({
                 type: 'get-profile',
-                profile: profile
+                profile
             })
-        }).then(() => console.log("Profile object current: ", profile));
+        });
 }
 
 export const updateCurrentProfile = (dispatch, values) => {
-    return fetch('http://localhost:4000/api/profile/edit', {
+    return fetch('http://localhost:4000/api/profile', {
         method: 'PUT',
         body: JSON.stringify(values),
         headers: {
@@ -23,9 +22,9 @@ export const updateCurrentProfile = (dispatch, values) => {
     })
         .then(response =>
             dispatch({
+
                 type: 'save8',
                 values
 
-            }))
-        .then(r => console.log("values in the updated current profile method: ", values));
+            }));
 }
