@@ -25,6 +25,7 @@ import EditScreen from "./components/a8/Build/ProfileScreen/EditScreen";
 import HomeScreen from "./components/a8/Build/HomeScreen/HomeScreen";
 import ExploreScreen from "./components/a8/Build/ExploreScreen/ExploreScreen";
 import A9 from "./a9";
+import HomeScreen9 from "./a9/Build/HomeScreen/HomeScreen";
 
 const reducer = combineReducers({tweets: tweetsReducer7, who: whoReducer, profile:profileReducer, tweet: tweetsReducer})
 const store = createStore(reducer);
@@ -71,6 +72,7 @@ function App() {
                 <Route path="/a8/twitter/profile" component={ProfileScreen} exact={true}/>
                 <Route path="/a8/twitter/editProfile" component={EditScreen} exact={true}/>
                 <Route path="/a8/twitter/home" component={HomeScreen} exact={true}/>
+                <Route path="/a9/twitter/home" component={HomeScreen9} exact={true}/>
             </div>
         </BrowserRouter>
         </Provider>

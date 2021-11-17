@@ -2,7 +2,7 @@ import React from "react";
 import './tweet.css';
 import TweetStats from "./TweetStats";
 import {useDispatch} from "react-redux";
-import {deleteTweet} from "../../../../services/tweetService";
+import {deleteTweet} from "../../../services/tweetService";
 
 const TweetListItem = ({tweet}) => {
     const dispatch = useDispatch();
