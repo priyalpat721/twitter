@@ -1,0 +1,18 @@
+.wd-table {
+    margin-bottom: 16px;
+}
+.wd-form-wh {
+    width: 100%;
+    color: white;
+    padding: 15px 0 0;
+    background-color: black;
+}
+
+.wd-table-pic {
+    vertical-align: top;
+}
+
+.wd-image {
+    width: 48px;
+    margin: 16px;
+}
