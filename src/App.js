@@ -57,7 +57,7 @@ function App() {
                 <Route path="/a7/twitter/home" component={HomeScreen7} exact={true}>
                     <HomeScreen7/>
                 </Route>
-                <Route path= "/a8/practice" exact={true}>
+                <Route path= {["/", "/a8", "/a8/practice"]} exact={true}>
                     <Practice8/>
                 </Route>
                 <Route path="/a9">
