@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import './profile.css';
 import {useDispatch, useSelector} from "react-redux";
 import {getCurrentProfile} from "../../services/profileService";
@@ -21,7 +21,7 @@ const Profile = () => {
             <div className="mb-4">
                 <div className="row">
                     <div className="col-1">
-                        <Link to="/a8/twitter/home">
+                        <Link to="/a9/twitter/home">
                             <i className="fas fa-arrow-left col-1 pt-2 text-white"/>
                         </Link>
                     </div>
@@ -44,7 +44,7 @@ const Profile = () => {
                             </div>
                         </div>
                         <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 mt-2">
-                            <Link to="/a8/twitter/editProfile">
+                            <Link to="/a9/twitter/editProfile">
                                 <button className="btn btn-black rounded-pill border-white text-nowrap">
                                     <label className="fw-bold text-white">Edit Profile</label>
                                 </button>

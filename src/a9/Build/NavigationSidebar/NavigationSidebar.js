@@ -9,10 +9,10 @@ const NavigationSidebar = (
         <div>
             <div className="nav-bar">
                 <ul className="list-group">
-                    <Link to="/a8/" className="list-group-item">
+                    <Link to="/a9/" className="list-group-item">
                             <i className="fab fa-twitter"/>
                         </Link>
-                    <Link to="/a8/twitter/home" className={`list-group-item text-white
+                    <Link to="/a9/twitter/home" className={`list-group-item text-white
                           ${active === 'home' ? 'active' :""}`}>
                             <div className="row">
                                 <div className="col-2">
@@ -24,7 +24,7 @@ const NavigationSidebar = (
                             </div>
                     </Link>
 
-                    <Link to="/a8/twitter/explore" className={`list-group-item text-white
+                    <Link to="/a9/twitter/explore" className={`list-group-item text-white
                           ${active === 'explore' ? 'active' :""}`}>
                             <div className="row">
                                 <div className="col-2">
@@ -92,7 +92,7 @@ const NavigationSidebar = (
                         </a>
                     </li>
 
-                    <Link to="/a8/twitter/profile" className={`list-group-item text-white
+                    <Link to="/a9/twitter/profile" className={`list-group-item text-white
                           ${active === 'profile' ? 'active' :""}`}>
                             <div className="row">
                                 <div className="col-2">
