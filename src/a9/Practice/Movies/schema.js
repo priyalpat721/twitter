@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const schema = mongoose.Schema({
+const schema = new mongoose.Schema({
     title: String,
     rating: Number
 }, {collection: 'movies'});

@@ -29,9 +29,13 @@ const Movies = () => {
                 movies.map(m => m._id === movie._id ? movie : m)
             ));
 
-    useEffect(() =>
+    useEffect(() =>{
         service.findAllMovies()
-            .then(movies => setMovies(movies)));
+            .then(movies => setMoviesFunction(movies))}, []);
+
+    const setMoviesFunction = (movies) => {
+        setMovies(movies);
+    }
     return(
         <div>
             <button
