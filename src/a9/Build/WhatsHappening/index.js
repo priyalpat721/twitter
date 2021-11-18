@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./whatsHappening.css";
 import {useDispatch} from "react-redux";
-import {postNewTweet} from "../../../services/tweetService";
+import {postNewTweet} from "../../services/tweetService";
 
 
 const WhatsHappening = () => {

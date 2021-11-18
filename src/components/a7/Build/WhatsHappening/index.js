@@ -7,7 +7,7 @@ const WhatsHappening = () => {
     const dispatch = useDispatch();
     const tweetClickHandler = () => {
         dispatch({
-            type: 'create-tweet',
+            type: 'create-tweet7',
             tweet: whatsHappening
         });
     }

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {useSelector, useDispatch} from "react-redux";
 import './profile.css';
 import {Link} from "react-router-dom";
-import {updateCurrentProfile} from "../../../../services/profileService";
+import {updateCurrentProfile} from "../../services/profileService";
 
 const profileState = (state) => state.profile;
 

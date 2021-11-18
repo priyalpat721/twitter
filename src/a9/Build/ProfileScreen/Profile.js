@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import './profile.css';
 import {useDispatch, useSelector} from "react-redux";
-import {getCurrentProfile} from "../../../../services/profileService";
+import {getCurrentProfile} from "../../services/profileService";
 import {Link} from "react-router-dom";
 
 const profileState = (state) => state.profile;
@@ -20,11 +20,15 @@ const Profile = () => {
         <div>
             <div className="mb-4">
                 <div className="row">
-                    <Link to="/a8/twitter/home">
-                        <i className="fas fa-arrow-left col-1 pt-2 ms-2 text-white"/>
-                    </Link>
-                    <div className="h5 col-10">{profile.firstName} {profile.lastName}</div>
-
+                    <div className="col-1">
+                        <Link to="/a8/twitter/home">
+                            <i className="fas fa-arrow-left col-1 pt-2 text-white"/>
+                        </Link>
+                    </div>
+                    <div className="col-10">
+                        <div className="h5">{profile.firstName} {profile.lastName}</div>
+                        <div className="wd-normal">5196 Tweets</div>
+                    </div>
                 </div>
                 <img src={banner}
                      className="wd-banner-pic"/>

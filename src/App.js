@@ -11,9 +11,8 @@ import Practice7 from "./components/a7/Practice";
 import HomeScreen7 from "./components/a7/Build/HomeScreen/HomeScreen";
 import ExploreScreen7 from "./components/a7/Build/ExploreScreen/ExploreScreen";
 import whoReducer from "./reducers/whoReducer";
-import tweetsReducer7 from "./reducers/tweetsReducer7";
-import profileReducer from "./reducers/profileReducer"
 import tweetsReducer from "./reducers/tweetsReducer";
+import profileReducer from "./reducers/profileReducer"
 import {combineReducers, createStore} from "redux";
 import {Provider} from "react-redux";
 import React from "react";
@@ -26,8 +25,12 @@ import HomeScreen from "./components/a8/Build/HomeScreen/HomeScreen";
 import ExploreScreen from "./components/a8/Build/ExploreScreen/ExploreScreen";
 import A9 from "./a9";
 import HomeScreen9 from "./a9/Build/HomeScreen/HomeScreen";
+import ExploreScreen9 from "./a9/Build/ExploreScreen/ExploreScreen";
+import EditScreen9 from "./a9/Build/ProfileScreen/EditScreen";
+import ProfileScreen9 from "./a9/Build/ProfileScreen/ProfileScreen";
+import Practice9 from "./a9/Practice";
 
-const reducer = combineReducers({tweets: tweetsReducer7, who: whoReducer, profile:profileReducer, tweet: tweetsReducer})
+const reducer = combineReducers({tweets: tweetsReducer, who: whoReducer, profile:profileReducer})
 const store = createStore(reducer);
 
 
@@ -60,6 +63,9 @@ function App() {
                 <Route path= {["/", "/a8", "/a8/practice"]} exact={true}>
                     <Practice8/>
                 </Route>
+                <Route path= {["/", "/a9", "/a9/practice"]} exact={true}>
+                    <Practice9/>
+                </Route>
                 <Route path="/a9">
                     <A9/>
                 </Route>
@@ -73,6 +79,9 @@ function App() {
                 <Route path="/a8/twitter/editProfile" component={EditScreen} exact={true}/>
                 <Route path="/a8/twitter/home" component={HomeScreen} exact={true}/>
                 <Route path="/a9/twitter/home" component={HomeScreen9} exact={true}/>
+                <Route path="/a9/twitter/explore" component={ExploreScreen9} exact={true}/>
+                <Route path="/a9/twitter/profile" component={ProfileScreen9} exact={true}/>
+                <Route path="/a9/twitter/editProfile" component={EditScreen9} exact={true}/>
             </div>
         </BrowserRouter>
         </Provider>

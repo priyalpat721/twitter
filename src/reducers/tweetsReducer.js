@@ -24,7 +24,7 @@ const tweetsReducer = (state = posts, action) => {
         case 'delete-tweet':
             return state.filter(tweet => tweet._id !== action.tweet._id)
 
-        case 'create-tweet':
+        case 'create-tweet7':
             const tweet = {
                 "_id": (new Date()).getTime() + "",
                 "topic": "Web Development",
@@ -43,7 +43,32 @@ const tweetsReducer = (state = posts, action) => {
             };
             return([
                 {
-                    ...tweet
+                    ...tweet,
+                    "tweet": action.tweet
+                },
+                ...state
+            ]);
+
+        case 'create-tweet':
+            const t = {
+                "_id": (new Date()).getTime() + "",
+                "topic": "Web Development",
+                "userName": "ReactJS",
+                "verified": false,
+                "handle": "ReactJS",
+                "time": "2h",
+                ...action.tweets,
+                "avatar-image": "../../../images/react.png",
+                "logo-image": "../../../images/react.png",
+                "stats": {
+                    "comments": 123,
+                    "retweets": 234,
+                    "likes": 345
+                }
+            };
+            return([
+                {
+                    ...t
                 },
                 ...state
             ]);

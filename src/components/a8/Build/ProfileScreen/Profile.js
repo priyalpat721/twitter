@@ -21,7 +21,7 @@ const Profile = () => {
             <div className="mb-4">
                 <div className="row">
                     <div className="col-1">
-                        <Link to="/a8/twitter/home">
+                        <Link to="/a9/twitter/home">
                             <i className="fas fa-arrow-left col-1 pt-2 text-white"/>
                         </Link>
                     </div>
