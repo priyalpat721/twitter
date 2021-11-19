@@ -2,12 +2,11 @@ import React from "react";
 import './tweet.css';
 import TweetStats from "./TweetStats";
 import {useDispatch} from "react-redux";
-import {deleteTweet} from "../../services/tweetService";
-
+import service from "./service";
 const TweetListItem = ({tweet}) => {
     const dispatch = useDispatch();
     const deleteTweetClickHandler = () => {
-        deleteTweet(dispatch, tweet).then(r => "");
+        service.deleteTweet(dispatch, tweet).then();
     }
     return(
         <li className="list-group-item">

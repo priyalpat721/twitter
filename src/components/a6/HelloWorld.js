@@ -5,7 +5,7 @@ const HelloWorld = () => {
     return(
         <>
             <h1>Hello World!</h1>
-            <Link to="/a6/">
+            <Link to="/a6">
                 Practice
             </Link> |
             <Link to="/a6/twitter/home">

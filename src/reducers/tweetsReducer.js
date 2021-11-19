@@ -24,6 +24,32 @@ const tweetsReducer = (state = posts, action) => {
         case 'delete-tweet':
             return state.filter(tweet => tweet._id !== action.tweet._id)
 
+        case 'create-tweet9':
+            const t9 = {
+                "topic": "Web Development",
+                "userName": "ReactJS",
+                "verified": false,
+                "handle": "ReactJS",
+                "time": "2h",
+                "tweet": action.newTweet,
+                "avatar-image": "../../../images/react.png",
+                "logo-image": "../../../images/react.png",
+                "stats": {
+                    "comments": 123,
+                    "retweets": 234,
+                    "likes": 345
+                }
+            };
+            let tt = [
+                t9,
+                ...state,
+            ]
+            console.log("T9: ", t9);
+            console.log("TT: ", tt);
+           return ([{
+               tt
+           }]);
+
         case 'create-tweet7':
             const tweet = {
                 "_id": (new Date()).getTime() + "",

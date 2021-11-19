@@ -1,8 +1,8 @@
 import React, {useEffect} from "react";
 import './profile.css';
 import {useDispatch, useSelector} from "react-redux";
-import {getCurrentProfile} from "../../services/profileService";
 import {Link} from "react-router-dom";
+import {getCurrentProfile} from "../../../services/profileService";
 
 const profileState = (state) => state.profile;
 

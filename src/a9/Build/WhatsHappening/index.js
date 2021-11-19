@@ -1,16 +1,15 @@
 import React, {useState} from "react";
 import "./whatsHappening.css";
 import {useDispatch} from "react-redux";
-import {postNewTweet} from "../../services/tweetService";
-
+import service from "../TweetList/service";
 
 const WhatsHappening = () => {
     let [whatsHappening, setWhatsHappening] = useState('');
     const dispatch = useDispatch();
     const tweetClickHandler = () => {
-        postNewTweet(dispatch, {
+        service.createTweet(dispatch, {
             tweet: whatsHappening
-        }).then(r => "");
+        }, whatsHappening);
 
     }
     return (

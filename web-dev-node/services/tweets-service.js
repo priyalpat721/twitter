@@ -33,7 +33,6 @@ module.exports = (app) => {
         const id = req.params['id'];
         tweets = tweets.filter(tweet => tweet._id !== id);
         res.json(tweets);
-        res.sendStatus(200);
     }
 
     const likeTweet = (req, res) => {
@@ -52,7 +51,6 @@ module.exports = (app) => {
                 return tweet;
             }
         });
-        res.sendStatus(200);
     }
 
     app.put('/api/tweets/:id/like', likeTweet);
