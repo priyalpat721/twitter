@@ -1,5 +1,5 @@
-const URL = 'http://localhost:4000/rest/movies';
-// const URL = 'https://web-dev-node-pripat.herokuapp.com/rest/movies'
+// const URL = 'http://localhost:4000/rest/movies';
+const URL = 'https://web-dev-node-pripat.herokuapp.com/rest/movies'
 
 export const findAllMovies = () =>
     fetch(URL)

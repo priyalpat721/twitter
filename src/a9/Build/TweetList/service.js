@@ -1,5 +1,5 @@
-const URL = 'http://localhost:4000/api/tweets';
-
+// const URL = 'http://localhost:4000/api/tweets';
+const URL = 'https://web-dev-node-pripat.herokuapp.com/api/tweets';
 export const findAllTweets = (dispatch) =>
     fetch(URL)
         .then(response => response.json())
