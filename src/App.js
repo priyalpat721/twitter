@@ -32,9 +32,15 @@ function App() {
                 <Link to="/a9/">A9</Link>
 
                 <div className="container">
-
-
-
+                    <Route path={["/", "/a6"]} exact={true}>
+                        <A6/>
+                    </Route>
+                    <Route path={["/", "/a7"]} exact={true}>
+                        <A7/>
+                    </Route>
+                    <Route path={["/", "/a8"]} exact={true}>
+                        <A8/>
+                    </Route>
                     <Route path={["/", "/a9", "/a9/practice"]} exact={true}>
                         <Practice9/>
                     </Route>
