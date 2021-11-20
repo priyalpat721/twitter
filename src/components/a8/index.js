@@ -11,10 +11,6 @@ const A8 = () => {
     return(
         <div>
             <BrowserRouter>
-
-                <Route path={["/", "/a8"]} exact={true}>
-                    <A8/>
-                </Route>
                 <Route path={["/", "/a8"]} exact={true}>
                     <Practice/>
                 </Route>
