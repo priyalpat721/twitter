@@ -5,7 +5,6 @@ import ProfileScreen from "./Build/ProfileScreen/ProfileScreen";
 import EditScreen from "./Build/ProfileScreen/EditScreen";
 import HomeScreen from "./Build/HomeScreen/HomeScreen";
 import Practice from "./Practice/index";
-import A6 from "../a6";
 
 
 const A8 = () => {
