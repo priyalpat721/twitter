@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 
-const helloURL = 'http://localhost:4000/hello';
-// const helloURL = 'https://web-dev-node-pripat.herokuapp.com/hello'
+//const helloURL = 'http://localhost:4000/hello';
+const helloURL = 'https://web-dev-node-pripat.herokuapp.com/hello'
 const HelloApiClient = () => {
     const [hello, setHello] = useState('');
     useEffect(() => {

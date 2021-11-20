@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
-// const MOVIE_API = 'https://web-dev-node-pripat.herokuapp.com/api/movies/';
-const MOVIE_API = 'http://localhost:4000/api/movies/';
+const MOVIE_API = 'https://web-dev-node-pripat.herokuapp.com/api/movies/';
+//const MOVIE_API = 'http://localhost:4000/api/movies/';
 
 const MovieApiClient = () => {
     const [movie, setMovie] = useState({title: '', rating: 2.5});
