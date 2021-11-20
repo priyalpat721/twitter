@@ -4,22 +4,14 @@ import './vendors/bootstrap/bootstrap.min.css';
 import './vendors/fontawesome/css/all.css';
 import {BrowserRouter, Link, Route} from "react-router-dom";
 
-import Practice7 from "./components/a7/Practice";
-import HomeScreen7 from "./components/a7/Build/HomeScreen/HomeScreen";
-import ExploreScreen7 from "./components/a7/Build/ExploreScreen/ExploreScreen";
+
 import whoReducer from "./reducers/whoReducer";
 import tweetsReducer from "./reducers/tweetsReducer";
 import profileReducer from "./reducers/profileReducer"
 import {combineReducers, createStore} from "redux";
 import {Provider} from "react-redux";
 import React from "react";
-import ProfileScreen7 from "./components/a7/Build/ProfileScreen/ProfileScreen";
-import EditScreen7 from "./components/a7/Build/ProfileScreen/EditScreen";
-import Practice8 from "./components/a8/Practice";
-import ProfileScreen from "./components/a8/Build/ProfileScreen/ProfileScreen";
-import EditScreen from "./components/a8/Build/ProfileScreen/EditScreen";
-import HomeScreen from "./components/a8/Build/HomeScreen/HomeScreen";
-import ExploreScreen from "./components/a8/Build/ExploreScreen/ExploreScreen";
+
 import A9 from "./a9";
 import Practice9 from "./a9/Practice";
 import A6 from "./components/a6";
