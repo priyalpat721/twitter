@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from "react";
+const MOVIE_API = 'https://web-dev-node-pripat.herokuapp.com/api/movies/';
+// const MOVIE_API = 'http://localhost:4000/api/movies/';
 
 const MovieApiClient = () => {
     const [movie, setMovie] = useState({title: '', rating: 2.5});
@@ -14,7 +16,7 @@ const MovieApiClient = () => {
             _id: (new Date()).getTime().toString()
         };
 
-        fetch('http://localhost:4000/api/movies', {
+        fetch(MOVIE_API, {
             method: 'POST',
             body: JSON.stringify(newMovie),
             headers: { 'content-type': 'application/json' }
@@ -26,20 +28,20 @@ const MovieApiClient = () => {
     }
 
     const deleteMovie = (movie) =>
-        fetch(`http://localhost:4000/api/movies/${movie._id}`, {
+        fetch(MOVIE_API+`${movie._id}`, {
             method: 'DELETE'
         })
             .then(response => response.json())
             .then(movies => setMovies(movies));
 
     useEffect(() =>
-            fetch('http://localhost:4000/api/movies')
+            fetch(MOVIE_API)
                 .then(response => response.json())
                 .then(movies => setMovies(movies))
         , []);
 
     const saveMovie = () =>
-        fetch(`http://localhost:4000/api/movies/${movie._id}`, {
+        fetch(MOVIE_API+`${movie._id}`, {
             method: 'PUT',
             body: JSON.stringify(movie),
             headers: {
