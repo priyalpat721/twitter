@@ -11,6 +11,9 @@ const A7 = () => {
         <div>
             <BrowserRouter>
                 <Route path={["/", "/a7"]} exact={true}>
+                    <A7/>
+                </Route>
+                <Route path={["/", "/a7"]} exact={true}>
                     <Practice/>
                 </Route>
                 <Route path="/a7/twitter/home" component={HomeScreen} exact={true}>

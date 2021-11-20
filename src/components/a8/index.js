@@ -5,12 +5,17 @@ import ProfileScreen from "./Build/ProfileScreen/ProfileScreen";
 import EditScreen from "./Build/ProfileScreen/EditScreen";
 import HomeScreen from "./Build/HomeScreen/HomeScreen";
 import Practice from "./Practice/index";
+import A6 from "../a6";
 
 
 const A8 = () => {
     return(
         <div>
             <BrowserRouter>
+
+                <Route path={["/", "/a8"]} exact={true}>
+                    <A8/>
+                </Route>
                 <Route path={["/", "/a8"]} exact={true}>
                     <Practice/>
                 </Route>

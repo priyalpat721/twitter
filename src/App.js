@@ -33,12 +33,16 @@ function App() {
 
                 <div className="container">
 
-                    <A6/>
-                    <A7/>
-                    <A8/>
-                    <A9/>
 
-                </div>
+
+                    <Route path={["/", "/a9", "/a9/practice"]} exact={true}>
+                        <Practice9/>
+                    </Route>
+                    <Route path="/a9">
+                        <A9/>
+                    </Route>
+
+                  </div>
             </BrowserRouter>
         </Provider>
     );
