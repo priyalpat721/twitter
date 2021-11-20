@@ -12,6 +12,11 @@ import {combineReducers, createStore} from "redux";
 import {Provider} from "react-redux";
 import React from "react";
 
+import A9 from "./a9";
+import Practice9 from "./a9/Practice";
+import A6 from "./components/a6";
+import A7 from "./components/a7";
+import A8 from "./components/a8";
 
 const reducer = combineReducers({tweets: tweetsReducer, who: whoReducer, profile: profileReducer})
 const store = createStore(reducer);
@@ -26,7 +31,14 @@ function App() {
                 <Link to="/a8/">A8</Link> |
                 <Link to="/a9/">A9</Link>
 
+                <div className="container">
 
+                    <A6/>
+                    <A7/>
+                    <A8/>
+                    <A9/>
+
+                </div>
             </BrowserRouter>
         </Provider>
     );
