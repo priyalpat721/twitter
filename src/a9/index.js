@@ -5,10 +5,14 @@ import HomeScreen9 from "./Build/HomeScreen/HomeScreen";
 import ExploreScreen9 from "./Build/ExploreScreen/ExploreScreen";
 import ProfileScreen9 from "./Build/ProfileScreen/ProfileScreen";
 import EditScreen9 from "./Build/ProfileScreen/EditScreen";
+import Practice from "./Practice/index"
 
 const A9 = () => {
     return(
         <div>
+            <Route path={["/", "/a9", "/a9/practice"]} exact={true}>
+                <Practice/>
+            </Route>
             <Route path="/a9/twitter">
                 <Build/>
             </Route>

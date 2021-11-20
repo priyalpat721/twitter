@@ -28,10 +28,10 @@ function App() {
     return (
         <Provider store={store}>
             <BrowserRouter>
-                <Link to="/a6">A6</Link> |
-                <Link to="/a7">A7</Link> |
-                <Link to="/a8">A8</Link> |
-                <Link to="/a9">A9</Link>
+                <Link to="/a6/">A6</Link> |
+                <Link to="/a7/">A7</Link> |
+                <Link to="/a8/">A8</Link> |
+                <Link to="/a9/">A9</Link>
 
                 <div className="container">
                     <Route path={["/", "/a6"]} exact={true}>
@@ -43,9 +43,7 @@ function App() {
                     <Route path={["/", "/a8"]} exact={true}>
                         <A8/>
                     </Route>
-                    <Route path={["/", "/a9", "/a9/practice"]} exact={true}>
-                        <Practice9/>
-                    </Route>
+
                     <Route path="/a9">
                         <A9/>
                     </Route>
