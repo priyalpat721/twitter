@@ -1,4 +1,4 @@
-const URL = 'http://localhost:4000/tweets/tweeter-service';
+const URL = 'http://localhost:4000/api/tweets';
 
 export const findAllTweets = (dispatch) =>
     fetch(URL)
