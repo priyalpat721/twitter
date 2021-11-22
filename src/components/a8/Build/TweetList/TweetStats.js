@@ -6,7 +6,7 @@ const TweetStats = ({tweet}) => {
     const dispatch = useDispatch();
 
     const likeClickHandler = () => {
-        likeTweet(dispatch, tweet).then("");
+        likeTweet(dispatch, tweet);
     };
     return (<div className="row mt-2">
         <div className="col">

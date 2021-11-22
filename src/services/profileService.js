@@ -1,5 +1,5 @@
-const PROFILE_API = 'https://web-dev-node-pripat.herokuapp.com/api/profile';
-//const PROFILE_API = 'http://localhost:4000/api/profile';
+//const PROFILE_API = 'https://web-dev-node-pripat.herokuapp.com/api/profile';
+const PROFILE_API = 'http://localhost:4000/api/profile';
 
 export const getCurrentProfile = (dispatch) => {
 
