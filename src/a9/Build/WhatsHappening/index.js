@@ -7,9 +7,25 @@ const WhatsHappening = () => {
     let [whatsHappening, setWhatsHappening] = useState('');
     const dispatch = useDispatch();
     const tweetClickHandler = () => {
-        service.createTweet(dispatch, {
-            tweet: whatsHappening
-        }, whatsHappening);
+        const newTweet = {
+            topic: "Web Development",
+            userName: "ReactJS",
+            verified: false,
+            handle: "ReactJS",
+            title: "New tweet just posted",
+            tweet: whatsHappening,
+            time: "2h",
+            "logo-image": "../../../images/react.png",
+            "avatar-image": "../../../images/react.png",
+            stats: {
+                comments: 123,
+                retweets: 234,
+                likes: 345
+            },
+            liked: false
+        }
+
+        service.createTweet(dispatch, newTweet);
 
     }
     return (

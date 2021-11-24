@@ -3,6 +3,7 @@ import {useSelector, useDispatch} from "react-redux";
 import './profile.css';
 import {Link} from "react-router-dom";
 import {updateCurrentProfile} from "../../../services/profileService";
+import service from "./service";
 
 const profileState = (state) => state.profile;
 
@@ -25,7 +26,7 @@ const EditProfile = () => {
     const dispatch = useDispatch();
 
     const saveEditClickHandler = () => {
-        updateCurrentProfile(dispatch, values).then(r => "");
+        service.updateProfile(dispatch, values);
     }
 
     const exitEditorClickHandler = () => {

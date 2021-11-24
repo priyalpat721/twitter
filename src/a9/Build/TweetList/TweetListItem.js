@@ -6,7 +6,7 @@ import service from "./service";
 const TweetListItem = ({tweet}) => {
     const dispatch = useDispatch();
     const deleteTweetClickHandler = () => {
-        service.deleteTweet(dispatch, tweet).then();
+        service.deleteTweet(dispatch, tweet);
     }
     return(
         <li className="list-group-item">

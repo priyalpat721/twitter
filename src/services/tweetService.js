@@ -1,5 +1,5 @@
-//const TWEET_API = 'http://localhost:4000/api/tweets/';
-const TWEET_API = 'https://web-dev-node-pripat.herokuapp.com/api/tweets/'
+const TWEET_API = 'http://localhost:4000/api/tweets/';
+//const TWEET_API = 'https://web-dev-node-pripat.herokuapp.com/api/tweets/'
 
 export const fetchAllTweets = (dispatch) =>
     fetch(TWEET_API)
@@ -36,7 +36,7 @@ export const deleteTweet = (dispatch, tweet) =>
     }));
 
 export const likeTweet = (dispatch, tweet) => {
-    const urlTweet = TWEET_API +`${tweet._id}`+`/like`;
+    const urlTweet = TWEET_API + `${tweet._id}` + `like`;
     console.log(urlTweet);
     fetch(urlTweet, {
         method: 'PUT'

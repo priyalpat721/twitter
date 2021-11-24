@@ -1,5 +1,5 @@
-// const URL = 'http://localhost:4000/api/tweets';
-const URL = 'https://web-dev-node-pripat.herokuapp.com/api/tweets';
+const URL = 'http://localhost:4000/rest/tweets';
+//const URL = 'https://web-dev-node-pripat.herokuapp.com/api/tweets';
 export const findAllTweets = (dispatch) =>
     fetch(URL)
         .then(response => response.json())
@@ -10,17 +10,17 @@ export const findAllTweets = (dispatch) =>
             }));
 
 export const deleteTweet = (dispatch, tweet) =>
-    fetch(`${URL}/${tweet.id}`, {
+    fetch(`${URL}/${tweet._id}`, {
         method: 'DELETE',
     }).then(response => dispatch({
         type: 'delete-tweet',
         tweet
     }));
 
-export const createTweet = (dispatch, tweet, newTweet) => {
+export const createTweet = (dispatch, newTweet) => {
     fetch(URL, {
         method: 'POST',
-        body: JSON.stringify(tweet),
+        body: JSON.stringify(newTweet),
         headers: {
             'content-type': 'application/json'
         }
@@ -29,15 +29,14 @@ export const createTweet = (dispatch, tweet, newTweet) => {
         .then(tweet =>
             dispatch({
                     type: 'create-tweet9',
-                    tweet,
-                    newTweet
+                    tweet: tweet
                 }
             )
         );
 }
 
 export const likeTweet = (dispatch, tweet) =>
-    fetch(`${URL}/${tweet._id}`, {
+    fetch(URL +`/${tweet._id}`+`/like`, {
         method: 'PUT',
         body: JSON.stringify(tweet),
         headers: {
@@ -47,7 +46,7 @@ export const likeTweet = (dispatch, tweet) =>
         .then(response => response.json())
         .then(() =>
             dispatch({
-                type: 'like-tweet',
+                type: 'like-tweet9',
                 tweet
             }));
 

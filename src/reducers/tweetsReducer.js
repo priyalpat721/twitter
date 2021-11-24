@@ -3,52 +3,36 @@ import posts from '../data/tweets.json';
 const tweetsReducer = (state = posts, action) => {
     switch (action.type) {
         case 'fetch-all-tweets':
-            return(action.tweets);
+            return (action.tweets);
 
         case 'like-tweet':
             return state.map(tweet => {
-                    if(tweet._id === action.tweet._id) {
-                        if(tweet.liked === true) {
-                            tweet.liked = false;
-                            tweet.stats.likes--;
-                        } else {
-                            tweet.liked = true;
-                            tweet.stats.likes++;
-                        }
-                        return tweet;
+                if (tweet._id === action.tweet._id) {
+                    if (tweet.liked === true) {
+                        tweet.liked = false;
+                        tweet.stats.likes--;
                     } else {
-                        return tweet;
+                        tweet.liked = true;
+                        tweet.stats.likes++;
+
                     }
-                });
+                    return tweet;
+                } else {
+                    return tweet;
+                }
+            });
+
+        case 'like-tweet9':
+            return state.map(tweet => tweet);
 
         case 'delete-tweet':
             return state.filter(tweet => tweet._id !== action.tweet._id)
 
         case 'create-tweet9':
-            const t9 = {
-                "topic": "Web Development",
-                "userName": "ReactJS",
-                "verified": false,
-                "handle": "ReactJS",
-                "time": "2h",
-                "tweet": action.newTweet,
-                "avatar-image": "../../../images/react.png",
-                "logo-image": "../../../images/react.png",
-                "stats": {
-                    "comments": 123,
-                    "retweets": 234,
-                    "likes": 345
-                }
-            };
-            let tt = [
-                t9,
-                ...state,
-            ]
-            console.log("T9: ", t9);
-            console.log("TT: ", tt);
-           return ([{
-               tt
-           }]);
+            return ([
+                action.tweet,
+                    ...state
+            ]);
 
         case 'create-tweet7':
             const tweet = {
@@ -67,7 +51,7 @@ const tweetsReducer = (state = posts, action) => {
                     "likes": 345
                 }
             };
-            return([
+            return ([
                 {
                     ...tweet,
                     "tweet": action.tweet
@@ -92,14 +76,14 @@ const tweetsReducer = (state = posts, action) => {
                     "likes": 345
                 }
             };
-            return([
+            return ([
                 {
                     ...t
                 },
                 ...state
             ]);
         default:
-            return(state);
+            return (state);
     }
 };
 

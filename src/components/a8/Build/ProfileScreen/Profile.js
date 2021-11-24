@@ -13,7 +13,7 @@ const Profile = () => {
     let banner = profile.bannerPicture;
     let joined = profile.dateJoined;
 
-    useEffect(() => getCurrentProfile(dispatch), [dispatch]);
+    useEffect(() => getCurrentProfile(dispatch), []);
 
 
     return (

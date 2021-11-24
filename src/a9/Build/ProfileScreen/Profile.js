@@ -2,8 +2,7 @@ import React, {useEffect} from "react";
 import './profile.css';
 import {useDispatch, useSelector} from "react-redux";
 import {Link} from "react-router-dom";
-import {getCurrentProfile} from "../../../services/profileService";
-
+import service from "./service";
 const profileState = (state) => state.profile;
 
 const Profile = () => {
@@ -13,7 +12,7 @@ const Profile = () => {
     let banner = profile.bannerPicture;
     let joined = profile.dateJoined;
 
-    useEffect(() => getCurrentProfile(dispatch), [dispatch]);
+    useEffect(() => service.findProfileById(dispatch), []);
 
 
     return (

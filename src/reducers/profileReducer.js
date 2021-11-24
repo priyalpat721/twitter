@@ -5,6 +5,9 @@ const profileReducer = (state = profileData, action) => {
         case 'get-profile':
             return (action.profile);
 
+        case 'get-profile9':
+            return (action.profile[0]);
+
         case 'save8':
             return action.values;
 

@@ -10,7 +10,7 @@ const WhatsHappening = () => {
     const tweetClickHandler = () => {
         postNewTweet(dispatch, {
             tweet: whatsHappening
-        }).then(r => "");
+        }).then();
 
     }
     return (

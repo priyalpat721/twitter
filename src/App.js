@@ -4,9 +4,6 @@ import './vendors/bootstrap/bootstrap.min.css';
 import './vendors/fontawesome/css/all.css';
 import {BrowserRouter, Link, Route} from "react-router-dom";
 
-import Practice7 from "./components/a7/Practice";
-import HomeScreen7 from "./components/a7/Build/HomeScreen/HomeScreen";
-import ExploreScreen7 from "./components/a7/Build/ExploreScreen/ExploreScreen";
 import whoReducer from "./reducers/whoReducer";
 import tweetsReducer from "./reducers/tweetsReducer";
 import profileReducer from "./reducers/profileReducer"
